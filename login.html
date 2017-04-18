@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Login - Squarespace</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(document).ready(function(){
+				$("#test").click(function(){
+					
+					if($(this).prop('data-color') != '1')
+					{
+						$(this).css('background-color', 'white').css('opacity', 1);
+						$(this).prop('data-color','1');
+					}
+					else if(Number($(this).prop('data-color')) == 1)
+					{
+						$(this).css('background-color', 'black').css('opacity', 0.7);
+						$(this).prop('data-color','0');
+					}
+				});
+			});
+		</script>
+		
+	</head>
+	<body bgcolor="black">
+		<div>
+			<div class="wb">
+			</div>
+				
+				<a class="exit" href="http://www.squarespace.com">
+		  			<div class="www-x light">
+		    			<svg stroke="white" stroke-width="1px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+							<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+							<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+						</svg>
+		  			</div>
+				</a>
+		</div>
+		<div class="tubiao">
+			<div class="tubiao-1"></div>
+		</div>
+		
+		
+		<div class="input">
+			<input type="email" name="email" data-test="text" id="yui_3_17_2_1_1491648766175_901" placeholder="Email Address">
+			<div class="forget">forget?</div>
+		</div>
+		
+		
+			
+
+		<div class="input">
+			<input type="password" name="password" data-test="text" id="yui_3_17_2_1_1491648766175_957" placeholder="Password">
+			<div class="forget">forget?</div>
+		</div>	
+		<div style="width: 100%;display: flex;justify-content: center;">
+			<div class="stay">
+					<div class="gou-1" >
+						<div class="gou" id="test" data-color='0'>	
+						</div>
+					</div>
+					<div class="stay-logged-in">
+						Stay Logged In
+					</div>
+					<div class="google">
+						Login with Google+
+					</div>
+			</div>
+		</div>
+		<div style="width: 100%;display: flex;justify-content: center;">
+			<div class="anniu">
+				<div class="login">LOGIN</div>
+				<div class="signup">SIGN UP</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

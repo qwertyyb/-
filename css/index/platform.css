@@ -1,0 +1,47 @@
+.platform {
+	min-height: 900px;
+	background-image: url(../../img/all-in-one-desk-1500w.jpg);
+	background-size: 115%;
+	background-position: 0 100px;
+	background-repeat: no-repeat;
+}
+
+.platform .text {
+	padding-left: 10%;
+	padding-top: 28%;
+}
+.platform .text .top {
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	opacity: .8;
+	color: #7e7e7e;
+}
+.platform .text h2 {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	letter-spacing: .4em;
+    line-height: 1.8em;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.platform .text .bottom {
+	opacity: .8;
+    line-height: 2.2em;
+    font-weight: 500;
+    letter-spacing: .06em;
+    -webkit-font-smoothing: antialiased;
+}
+.platform .text button.toggle-details {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 15px 10%;
+	border: 1px #000 solid;
+	font-weight: 500;
+	letter-spacing: .15em;
+	margin-top: 20px;
+	background: none;
+}
+.platform .text button span {
+	display: inline-block;
+	transform: rotate(90deg);
+}

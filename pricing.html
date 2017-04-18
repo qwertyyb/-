@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pricing  —  Squarespace</title>
+		<link rel="stylesheet" href="css/HCo_fonts_www.css">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<link rel="stylesheet" href="css/templates.css">
+		<link rel="stylesheet" href="css/Pricing.css">
+		<script type="text/javascript" src="lib/jquery.min.js"></script>
+		<script type="text/javascript">
+			function tooltipConfig(){
+				$(".price-plan-feature-item").mouseover(function(){
+				var tooltip = $("#tooltip");
+				var tooltipheader = $("#tooltip .tooltip-header");
+				var tooltipbody = $("#tooltip .tooltip-body");
+				tooltipheader.text($(this).find(".price-plan-feature-item-heading").text());
+				tooltipbody.text($(this).find(".price-plan-feature-item-text").text());
+				tooltip.css("visibility", 'visible');
+				
+				});
+				$(".price-plan-feature-item").mousemove(function(event){
+					var tooltip = $(".tooltip");
+					tooltip.removeClass("hide-tool-tip");
+					tooltip.addClass("show-tool-tip");
+					var x = event.clientX;
+					var y = event.clientY;
+					var tooltipwidth = tooltip.innerWidth();
+					var tooltipheight = tooltip.innerHeight();
+					var tooltipleft = (x+tooltipwidth >= window.innerWidth) ? (x-tooltipwidth - 20) : (x+20)
+					var tooltiptop = Number((y+tooltipheight >= window.innerHeight) ? (window.pageYOffset + y -20-tooltipheight) : (window.pageYOffset+y+20));
+					tooltip.offset({'left': tooltipleft, 'top': tooltiptop});
+				});
+				$(".price-plan-feature-item").mouseleave(function(){
+					var tooltip = $(".tooltip");
+					tooltip.removeClass("show-tool-tip");
+					tooltip.addClass("hide-tool-tip");
+				});
+			}
+			function changeTag(){
+				$("#pricing-content").html($(("#id#").replace("id#",$(".nav-button-checked").attr("name"))).html());
+				$("#pricing-content").css('opacity', 0);
+				$("#pricing-content").animate({opacity: '1'}, 900);
+				tooltipConfig();
+			}
+			$(document).ready(function(){
+				changeTag();
+				$(".nav-button").click(function(){
+					$(this).addClass("nav-button-checked");
+					$(this).nextAll().removeClass('nav-button-checked');
+					$(this).prevAll().removeClass('nav-button-checked');
+					changeTag();
+				});
+				tooltipConfig();
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".footer-i18n-selection").on('click', function(){
+					var btntype = $(this).attr("data-type");
+					if(btntype == 'currency')
+					{
+						$("#currency").fadeIn(500);
+					}
+					else if(btntype == 'language')
+					{
+						$("#language").fadeIn(500);
+					}
+				});
+				$(".selection-page-exit-btn").on('click', function(){
+					$(this).parent().fadeOut(500);
+				});
+				$(".footer-i18n-selection-page").click(function(){
+					$(this).fadeOut(500);
+				});
+				$("[name='symbtn']").click(function(){
+					$(".currency-symbol").text($(this).find(".symbol").text());
+					$(".currency-code").text($(this).find(".code").text());
+					$(this).addClass("is--active");
+					$(this).nextAll().removeClass("is--active");
+					$(this).prevAll().removeClass('is--active');
+					var did = Number($(this).attr('data-id'));
+					if( did == 2)
+					{
+						$("#commerce-left-head-number").text(26);
+						$("#commerce-left-number").text(30);
+						$("#commerce-right-head-number").text(40);
+						$("#commerce-right--number").text(46);
+						$("#websites-left-head-number").text(12);
+						$("#websites-left-number").text(16);
+						$("#websites-right-head-number").text(18);
+						$("#websites-right-number").text(26);
+					}
+					else if(did == 1)
+					{
+						$("#commerce-left-head-number").text(24);
+						$("#commerce-left-number").text(28);
+						$("#commerce-right-head-number").text(36);
+						$("#commerce-right--number").text(42);
+						$("#websites-left-head-number").text(11);
+						$("#websites-left-number").text(15);
+						$("#websites-right-head-number").text(17);
+						$("#websites-right-number").text(24);						
+					}
+				});
+				$("[name='languagebtn']").click(function(){
+					$(".language-code").text($(this).find('.code').text());
+					$(this).addClass('is--active');
+					$(this).nextAll().removeClass("is--active");
+					$(this).prevAll().removeClass('is--active');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header id="header-2016" class="header header-banner">
+			<div class="header-content header-content-box">
+				<h1 class="logo www-layout">
+					<a href="index.html">
+						<span>
+							<svg height="24px" width="168px" viewBox="0 0 168 24" xmlns="http://www.w3.org/2000/svg">
+								<title>Squarespace</title>
+								<path id="squarespace-logo-horizontal" style="fill: #fff" d="M79.5626,5.53063l-5.24026,11.58048h1.33081l1.36326-3.03909h6.25848l1.34703,3.03909h1.39632L80.77798,5.53063H79.5626zM77.52551,12.88971l2.62856-5.84795l2.61171,5.84795H77.52551zM41.8326,10.73783c-2.52935-0.54218-3.12082-1.14987-3.12082-2.23424V8.47052c0-1.03445,0.95272-1.85615,2.44762-1.85615c1.18232,0,2.25046,0.37809,3.31798,1.24845l0.75556-1.00201c-1.1661-0.93587-2.36526-1.41254-4.0411-1.41254c-2.18433,0-3.77781,1.33081-3.77781,3.13767v0.03244c0,1.88921,1.21539,2.74335,3.86016,3.3186c2.41455,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01885,1.95472-2.56304,1.95472c-1.59285,0-2.74273-0.54218-3.94189-1.62654l-0.80485,0.95334c1.37947,1.23161,2.87437,1.8393,4.69745,1.8393c2.28353,0,3.9263-1.2809,3.9263-3.25247v-0.03244C45.57796,12.23273,44.39502,11.29623,41.8326,10.73783zM59.77015,11.36174V11.3293c0-3.17073-2.34904-5.91409-5.84795-5.91409s-5.88039,2.77642-5.88039,5.94653v0.03307c0,3.17011,2.34841,5.91346,5.84733,5.91346c1.41317,0,2.64477-0.45983,3.61434-1.21539l1.52734,1.36325l0.88721-0.96894l-1.51112-1.28152C59.26104,14.15438,59.77015,12.79113,59.77015,11.36174zM57.45418,14.40083L55.3023,12.4461l-0.87099,0.96894l2.15188,1.83992c-0.72249,0.54218-1.64277,0.85414-2.661,0.85414c-2.62793,0-4.53399-2.13566-4.53399-4.74737V11.3293c0-2.61233,1.87299-4.71492,4.50092-4.71492c2.62855,0,4.53399,2.13566,4.53399,4.74737v0.03307C58.42312,12.54468,58.07809,13.57913,57.45418,14.40083zM71.26765,12.29824c0,2.51313-1.34704,3.79465-3.46585,3.79465c-2.18494,0-3.51514-1.39632-3.51514-3.87701V5.61237h-1.29774v6.68587c0,3.25247,1.93788,4.99381,4.77981,4.99381c2.875,0,4.79665-1.74135,4.79665-5.09239V5.61237h-1.29774V12.29824zM150.96526,16.10911c-2.52997,0-4.45163-2.08637-4.45163-4.74737V11.3293c0-2.64477,1.90544-4.71492,4.45163-4.71492c1.56042,0,2.64478,0.65698,3.61372,1.57726l0.88721-0.95272c-1.14987-1.08436-2.39833-1.8237-4.4847-1.8237c-3.3835,0-5.8149,2.69406-5.8149,5.94653v0.03307c0,3.30176,2.44762,5.91346,5.76559,5.91346c2.08638,0,3.40034-0.80485,4.5995-2.02024l-0.85414-0.83792C153.57697,15.50141,152.5419,16.10911,150.96526,16.10911zM137.64406,5.53063l-5.24025,11.58048h1.3308l1.36327-3.03909h6.25848l1.34703,3.03909h1.39632l-5.24025-11.58048H137.64406zM135.60698,12.88971l2.62856-5.84795l2.61171,5.84795H135.60698zM159.83484,15.92817v-4.02425h6.2747v-1.18294h-6.2747V6.79531h7.01404V5.61237h-8.31178v11.49875h8.39352v-1.18294H159.83484zM102.27933,11.90392h6.27471v-1.18294h-6.27471V6.79531h7.01405V5.61237h-8.31179v11.49875h8.39352v-1.18294h-7.09579V11.90392zM97.54881,9.06199V9.02955c0-0.90343-0.3288-1.7089-0.88721-2.26731c-0.7225-0.72249-1.85614-1.14987-3.26868-1.14987h-4.94453v11.49875h1.29774v-4.46785h3.28554l3.3342,4.46785h1.59348l-3.53136-4.69808C96.23484,12.08486,97.54881,10.96743,97.54881,9.06199zM89.74613,11.47654V6.81153h3.5482c1.85615,0,2.94051,0.85414,2.94051,2.26731v0.03244c0,1.47868-1.23223,2.36526-2.95673,2.36526H89.74613zM116.6849,10.73783c-2.52998-0.54218-3.12144-1.14987-3.12144-2.23424V8.47052c0-1.03445,0.95271-1.85615,2.44762-1.85615c1.18294,0,2.25046,0.37809,3.31798,1.24845l0.75618-1.00201c-1.16672-0.93587-2.36588-1.41254-4.04109-1.41254c-2.18495,0-3.77843,1.33081-3.77843,3.13767v0.03244c0,1.88921,1.21601,2.74335,3.86016,3.3186c2.41517,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01823,1.95472-2.56242,1.95472c-1.59348,0-2.74335-0.54218-3.94251-1.62654l-0.80485,0.95334c1.3801,1.23161,2.87499,1.8393,4.69807,1.8393c2.28353,0,3.92567-1.2809,3.92567-3.25247v-0.03244C120.42963,12.23273,119.24731,11.29623,116.6849,10.73783zM127.9528,5.61237h-4.30376v11.49875h1.29774V13.0538h2.79202c2.44761,0,4.51777-1.28152,4.51777-3.76158V9.25915C132.25656,6.99247,130.54828,5.61237,127.9528,5.61237zM130.94197,9.3415c0,1.51112-1.24846,2.52935-3.15389,2.52935h-2.84131V6.81153h2.90745c1.85614,0,3.08775,0.85414,3.08775,2.49691V9.3415zM18.77845,6.54165c0.38683-0.38683,0.38683-1.01281,0-1.39964c-0.38679-0.38679-1.01281-0.38679-1.3996,0l-9.2369,9.2369c-1.31217,1.31217-3.44709,1.31217-4.75856,0.0007c-1.31213-1.31213-1.31213-3.44709,0-4.75922l7.43067-7.43067c0.38679-0.38683,0.38679-1.01281,0-1.39964c-0.38683-0.38679-1.01281-0.38679-1.39964,0L1.98376,8.22076c-2.08368,2.08372-2.08368,5.47477,0,7.55845c2.08372,2.08372,5.47411,2.08302,7.55779-0.00066L18.77845,6.54165zM5.06321,12.6998c0.38679,0.38679,1.01281,0.38679,1.3996,0l9.2369-9.2369c1.31213-1.31213,3.44709-1.31213,4.75856-0.0007c0.38679,0.38683,1.01281,0.38683,1.3996,0c0.38683-0.38679,0.38683-1.01277,0-1.3996c-2.08368-2.08372-5.47407-2.08302-7.55775,0.0007l-9.2369,9.2369C4.67638,11.68699,4.67638,12.31298,5.06321,12.6998zM24.93661,11.30021c-0.38679-0.38683-1.01281-0.38683-1.3996,0l-9.2369,9.2369c-1.31213,1.31213-3.44709,1.31213-4.75856,0.00066c-0.38679-0.38679-1.01281-0.38679-1.3996,0c-0.38683,0.38683-0.38683,1.01281,0,1.3996c2.08368,2.08372,5.47407,2.08302,7.55775-0.00066l9.2369-9.2369C25.32343,12.31298,25.32343,11.68699,24.93661,11.30021zM20.45826,8.22146l-9.2369,9.2369c-0.38683,0.38679-0.38683,1.01281,0,1.3996c0.38679,0.38683,1.01281,0.38683,1.3996,0l9.2369-9.2369c1.31217-1.31213,3.44709-1.31213,4.75856-0.00066c1.31213,1.31213,1.31213,3.44709,0,4.75922l-7.43067,7.43067c-0.38679,0.38679-0.38679,1.01281,0,1.3996c0.38683,0.38683,1.01281,0.38683,1.39964,0l7.43067-7.43067c2.08368-2.08368,2.08368-5.47473,0-7.55845C25.93233,6.13708,22.54194,6.13774,20.45826,8.22146z"></path>
+							</svg>
+						</span>
+					</a>
+				</h1>
+				<a class="login" href="login.html">Log In</a>
+				<a class="button light" href="templates.html">Get Started</a>
+			</div>
+		</header>
+		<section class="hero hero-generic">
+			<div class="sqs-layout">
+				<div class="sqs-block-content">
+					<h1>
+						Simple Pricing
+					</h1>
+				</div>
+			</div>
+		</section>
+		<main class="content">
+			<nav class="pricing-nav">
+				<a name="websites" class="button nav-button nav-button-checked" href="#websites">Websites</a>
+				<a name="commerce" class="button nav-button" href="#commerce">Online Stores</a>
+			</nav>
+			<div id="pricing-content" class="container-pricing pricing-container"></div>
+			<div id="commerce" class="container-pricing pricing-content">
+				<div class="price-content-container">
+					<div class="price-plan">
+						<p class="price-plan-name">Basic</p>
+						<div class="price-plan-lockup">
+							<p class="price-plan-lockup-number">
+								<span class="currency-symbol currentcy-cymobol-position">$</span>
+								<span id="commerce-left-head-number" class="amount">26</span>
+							</p>
+							<p class="price-plan-lockup-schedule">
+								Per month billed annually or 
+								<span class="currency-symbol price-symbol">$</span>
+								<span id="commerce-left-number" class="monthly amount">30</span>
+								 month to month
+								 <span class="vat-copy"> Excl VAT</span>.
+							</p>
+						</div>
+						<p class="price-plan-summary">Everything you need to get your business off the ground.</p>
+						<ul class="price-plan-feature-list">
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Sell Unlimited Products
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce doesn’t place limits on the number of products in your inventory.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									No Transaction Fees
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace doesn’t charge transaction fees in this plan. (Credit card and PayPal processor fees will still apply.)
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Squarespace Website with Integrated Galleries and Blogs
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce is completely integrated with Squarespace’s sophisticated publishing platform. Squarespace Commerce also includes unlimited pages, storage, bandwidth, and contributors.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Mobile-Optimized Website and Checkout
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace websites are optimized for mobile shopping, and checkout works flawlessly on any device.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Free Custom Domain
+									<br /><small>with annual purchase</small>
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace Commerce Plans purchased for an annual term include one (1) year of free domain registration on available domains on our cheapest pricing tier. Domains registered through this promotion will renew at our standard rate after the first year. Outside of this offer, you can attach unlimited domains to any Squarespace plan, on a monthly or yearly basis.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									SSL Security Included
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace automatically creates and configures free SSL certificates with industry recommended 2048-bit keys and SHA-2 signatures for all of our websites, including ones with custom domains. With your site secured by SSL, your visitors will see a green secure lock icon when browsing your site in their browser’s address bar, and your site’s rankings in Google will be improved.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									24/7 Support
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce includes premium support from our award-winning Customer Care team.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Powerful Commerce Analytics
+								</span>
+								<span class="price-plan-feature-item-text">
+									Track KPIs such as revenue, average order volume, and conversion rate. Gain actionable insights into which marketing channels are driving sales, how your purchase funnel is converting, and much more.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Professional Email from Google
+								</span>
+								<span class="price-plan-feature-item-text">
+									If you sign up for a Commerce Plan and register or connect a domain, you’ll receive one (1) professional Gmail and G Suite account, free for the first year. After the first year, your Gmail and G Suite account will renew at the standard annual or monthly rate, depending on which billing plan you choose. Offer is only valid for new G Suite accounts set up through Squarespace.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									$100 Adwords Credit
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce Plans include a one-time Google AdWords credit of $100, after spending the first $25. Offer only valid in US and Canada.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Unlimited Storage, Bandwidth, and Contributors
+								</span>
+								<span class="price-plan-feature-item-text">
+									Scale with confidence. Squarespace Commerce does not place any caps on your bandwidth or storage usage.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Inventory, Orders, Tax, Discounts
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace’s fully integrated commerce platform offers robust inventory and order management, tax, shipping and coupon controls.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Label Printing via Shipstation
+								</span>
+								<span class="price-plan-feature-item-text">
+									Connect to your ShipStation account to sync orders and bulk-print labels for all major carriers. Shipping status syncs between ShipStation and Squarespace.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Integrated Accounting via Xero
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce automatically syncs with Xero’s cloud based accounting platform, making it easy to keep track of revenue, expenses and tax liabilities.
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="price-plan">
+						<p class="price-plan-name">Advanced</p>
+						<div class="price-plan-lockup">
+							<p class="price-plan-lockup-number">
+								<span class="currency-symbol currentcy-cymobol-position">$</span>
+								<span id="commerce-right-head-number" class="amount">40</span>
+							</p>
+							<p class="price-plan-lockup-schedule">
+								Per month billed annually or 
+								<span class="currency-symbol price-symbol">$</span>
+								<span id="commerce-right--number" class="monthly amount">46</span>
+								 month to month
+								 <span class="vat-copy"> Excl VAT</span>.
+							</p>
+						</div>
+						<p class="price-plan-summary">Advanced features as your business grows.</p>
+						<ul class="price-plan-feature-list">
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Sell Unlimited Products
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce doesn’t place limits on the number of products in your inventory.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									No Transaction Fees
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace doesn’t charge transaction fees in this plan. (Credit card and PayPal processor fees will still apply.)
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Squarespace Website with Integrated Galleries and Blogs
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce is completely integrated with Squarespace’s sophisticated publishing platform. Squarespace Commerce also includes unlimited pages, storage, bandwidth, and contributors.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Mobile-Optimized Website and Checkout
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace websites are optimized for mobile shopping, and checkout works flawlessly on any device.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Free Custom Domain
+									<br /><small>with annual purchase</small>
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace Commerce Plans purchased for an annual term include one (1) year of free domain registration on available domains on our cheapest pricing tier. Domains registered through this promotion will renew at our standard rate after the first year. Outside of this offer, you can attach unlimited domains to any Squarespace plan, on a monthly or yearly basis.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									SSL Security Included
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace automatically creates and configures free SSL certificates with industry recommended 2048-bit keys and SHA-2 signatures for all of our websites, including ones with custom domains. With your site secured by SSL, your visitors will see a green secure lock icon when browsing your site in their browser’s address bar, and your site’s rankings in Google will be improved.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									24/7 Support
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce includes premium support from our award-winning Customer Care team.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Powerful Commerce Analytics
+								</span>
+								<span class="price-plan-feature-item-text">
+									Track KPIs such as revenue, average order volume, and conversion rate. Gain actionable insights into which marketing channels are driving sales, how your purchase funnel is converting, and much more.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Professional Email from Google
+								</span>
+								<span class="price-plan-feature-item-text">
+									If you sign up for a Commerce Plan and register or connect a domain, you’ll receive one (1) professional Gmail and G Suite account, free for the first year. After the first year, your Gmail and G Suite account will renew at the standard annual or monthly rate, depending on which billing plan you choose. Offer is only valid for new G Suite accounts set up through Squarespace.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									$100 Adwords Credit
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce Plans include a one-time Google AdWords credit of $100, after spending the first $25. Offer only valid in US and Canada.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Unlimited Storage, Bandwidth, and Contributors
+								</span>
+								<span class="price-plan-feature-item-text">
+									Scale with confidence. Squarespace Commerce does not place any caps on your bandwidth or storage usage.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Inventory, Orders, Tax, Discounts
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace’s fully integrated commerce platform offers robust inventory and order management, tax, shipping and coupon controls.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Label Printing via Shipstation
+								</span>
+								<span class="price-plan-feature-item-text">
+									Connect to your ShipStation account to sync orders and bulk-print labels for all major carriers. Shipping status syncs between ShipStation and Squarespace.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Integrated Accounting via Xero
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace Commerce automatically syncs with Xero’s cloud based accounting platform, making it easy to keep track of revenue, expenses and tax liabilities.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Abandoned Checkout Autorecovery
+								</span>
+								<span class="price-plan-feature-item-text">
+									Send automated email reminders to customers who abandon the checkout process before completing their purchases.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Real Time Carrier Shipping
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace automatically calculates real-time shipping rates for USPS, UPS, and FedEx. Additional features assist with accurate package size calculations.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Checkout on Your Domain
+								</span>
+								<span class="price-plan-feature-item-text">
+									Direct customers to a secure checkout on your domain instead of secure.squarespace.com.
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="websites" class="container-pricing pricing-content">
+				<div class="price-content-container">
+					<div class="price-plan">
+						<p class="price-plan-name">Personal</p>
+						<div class="price-plan-lockup">
+							<p class="price-plan-lockup-number">
+								<span class="currency-symbol currentcy-cymobol-position">$</span>
+								<span id="websites-left-head-number" class="amount">12</span>
+							</p>
+							<p class="price-plan-lockup-schedule">
+								Per month billed annually or 
+								<span class="currency-symbol price-symbol">$</span>
+								<span id="websites-left-number" class="monthly amount">16</span>
+								 month to month
+								 <span class="vat-copy"> Excl VAT</span>.
+							</p>
+						</div>
+						<p class="price-plan-summary">A beautiful, simple website.</p>
+						<ul class="price-plan-feature-list">
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									20 Pages, Galleries, and Blogs with Unlimited Bandwidth and Storage, and 2 Contributors
+								</span>
+								<span class="price-plan-feature-item-text">
+									Scale with confidence. Our Personal Plan doesn’t place any caps on your bandwidth or storage usage. Your website is limited to a maximum of 20 pages.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Mobile-Optimized Website
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace websites are responsively designed and mobile-ready from the start. Your page will look great on any device.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Powerful Website Analytics
+								</span>
+								<span class="price-plan-feature-item-text">
+									Track visits, traffic sources, popular content, mobile usage, site search queries, and much more.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Free Custom Domain
+									<br />
+									<small>with annual purchase</small>
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace website plans purchased for an annual term include one (1) year of free domain registration on available domains on our cheapest pricing tier. Domains registered through this promotion will renew at our standard rate after the first year. Outside of this offer, you can attach unlimited domains to any Squarespace plan, on a monthly or yearly basis.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									SSL Security Included
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace automatically creates and configures free SSL certificates with industry recommended 2048-bit keys and SHA-2 signatures for all of our websites, including ones with custom domains. With your site secured by SSL, your visitors will see a green secure lock icon when browsing your site in their browser’s address bar, and your site’s rankings in Google will be improved.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									24/7 Customer Support
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace plans include premium support from our award-winning Customer Care Team.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Fully Integrated E-Commerce
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace lets you sell physical goods, digital goods and services online right from within your website. We provide inventory tracking, order management, tax, shipping and coupon controls, and more.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Sell Unlimited Products & Accept Donations
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace doesn’t place limits on the number of products in your inventory.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									3% Sales Transaction Fee
+								</span>
+								<span class="price-plan-feature-item-text">
+									We charge a 3% transaction fee on sales in the Personal plan. You can upgrade to the Basic or Advanced Commerce plans at any time to remove Squarespace transaction fees. (Credit card and PayPal processor fees will still apply.)
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="price-plan">
+						<p class="price-plan-name">Business</p>
+						<div class="price-plan-lockup">
+							<p class="price-plan-lockup-number">
+								<span class="currency-symbol currentcy-cymobol-position">$</span>
+								<span id="websites-right-head-number" class="amount">18</span>
+							</p>
+							<p class="price-plan-lockup-schedule">
+								Per month billed annually or 
+								<span class="currency-symbol price-symbol">$</span>
+								<span id="websites-head-number" class="monthly amount">26</span>
+								 month to month
+								 <span class="vat-copy"> Excl VAT</span>.
+							</p>
+						</div>
+						<p class="price-plan-summary">Perfect for businesses of all sizes.</p>
+						<ul class="price-plan-feature-list">
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Unlimited Pages, Galleries, and Blogs with Unlimited Bandwidth and Storage, and Contributors
+								</span>
+								<span class="price-plan-feature-item-text">
+									Scale with confidence. Our Business Plan doesn’t place any caps on your bandwidth or storage usage.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Mobile-Optimized Website
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace websites are responsively designed and mobile-ready from the start. Your page will look great on any device.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Powerful Website Analytics
+								</span>
+								<span class="price-plan-feature-item-text">
+									Track visits, traffic sources, popular content, mobile usage, site search queries, and much more.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Free Custom Domain
+									<br><small>with annual purchase</small>
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace website plans purchased for an annual term include one (1) year of free domain registration on available domains on our cheapest pricing tier. Domains registered through this promotion will renew at our standard rate after the first year. Outside of this offer, you can attach unlimited domains to any Squarespace plan, on a monthly or yearly basis.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									SSL Security Included
+									
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace automatically creates and configures free SSL certificates with industry recommended 2048-bit keys and SHA-2 signatures for all of our websites, including ones with custom domains. With your site secured by SSL, your visitors will see a green secure lock icon when browsing your site in their browser’s address bar, and your site’s rankings in Google will be improved.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									24/7 Customer Support
+								</span>
+								<span class="price-plan-feature-item-text">
+									All Squarespace plans include premium support from our award-winning Customer Care Team.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+									  	<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Fully Integrated E-Commerce
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace lets you sell physical goods, digital goods and services online right from within your website. We provide inventory tracking, order management, tax, shipping and coupon controls, and more.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Sell Unlimited Products & Accept Donations
+								</span>
+								<span class="price-plan-feature-item-text">
+									Squarespace doesn’t place limits on the number of products in your inventory.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									2% Sales Transaction Fee
+								</span>
+								<span class="price-plan-feature-item-text">
+									We charge a 2% transaction fee on sales in the Business plan. You can upgrade to the Commerce Basic or Advanced plans at any time to remove Squarespace transaction fees. (Credit card and PayPal processor fees will still apply.)
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+											<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									Professional Email from Google
+								</span>
+								<span class="price-plan-feature-item-text">
+									If you sign up for the business plan and register or connect a domain, you’ll receive one (1) professional Gmail and G Suite account, free for the first year. After the first year, your Gmail and G Suite account will renew at the standard annual or monthly rate, depending on which billing plan you choose. Offer is only valid for new G Suite accounts set up through Squarespace.
+								</span>
+							</li>
+							<li class="price-plan-feature-item">
+								<span class="price-plan-feature-item-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+										<image width="32" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMAeJsBa4VpcVv+X/3FTvrJD0xC9j5SIjfx7Dwy+Vwt64MmsKgJJOQDmMcXHON54Czc39G7BqGEZcb2zcPrAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKlJREFUKM+F0NcWgjAMBuAojioOxIUT9wLFrXn/F7NIj0dLE/+79stF8gPQyWQt4JJDzHNeQJki7aIUD2CZdPvtWCG8Wku87pi98cfdJu8t3dudH+96mgu71//yQdoRh6OPj32Dy0xU7VPdYZZ84HwRv5ar1P7rjZrY7gCC0HTfXk0couBovl+o3rwT1Y+rLqP7i0Le5XZn3gGcC+8A1xvvANadd5nH0+Avdbsu0XBMQZ0AAAAASUVORK5CYII="></image>
+									</svg>
+									$100 Google AdWords Credit
+								</span>
+								<span class="price-plan-feature-item-text">
+									Our Business Plan includes $100 in Google AdWords credit. Offer valid in US and Canada after spending the first $25.
+								</span>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<section class="pricing-faq">
+				<div class="column">
+				    <h3>How long are your contracts?</h3>
+				    <p>Squarespace plans are paid monthly or yearly. We make it simple to start — and stop — your service at any time.</p>
+				   	<h3>Is there a discount for yearly service?</h3>
+				    <p>Yes, we offer discounts on up-front long-term commitments. You will also receive one year off of a new domain registration with your annual purchase.</p>
+				    <h3>Do I need another web host?</h3>
+					<p>No. All Squarespace plans include our fully-managed cloud hosting, ensuring your website remains available at all times.</p>
+					<h3>Can I download Squarespace?</h3>
+					<p>No. Squarespace is a fully-managed web service. We do not have plans to make a downloadable version. Squarespace does provide many standard methods for exporting your data.</p>
+					<h3>How do I accept payments with Squarespace commerce?</h3>
+					<p>Squarespace integrates with Stripe and accepts credit card payments directly to your bank account. You can accept more payment methods in checkout such as Apple Pay and PayPal. Sign up for an account with <a href="https://www.stripe.com/" target="_blank">Stripe</a> and <a href="https://www.paypal.com/" target="_blank">PayPal</a> in minutes and start accepting payments immediately.</p>
+					<h3>How much does it cost to process payments through Squarespace Commerce?</h3>
+					<p>There are no Squarespace transaction fees for Squarespace Commerce plans (Basic and Advanced). We charge a transaction fee of 2% on sales in the Business plan, and 3% on sales in the Personal plan. Visit <a href="https://stripe.com/pricing" target="_blank">Stripe</a> and <a href="https://www.paypal.com/us/webapps/mpp/merchant-fees" target="_blank">PayPal</a> for payment processing rates for your country.</p>
+					<h3>Do you offer student pricing?</h3>
+					<p>You can learn more about our education program <a href="/students">here</a>.</p>
+			  	</div>
+				<div class="column">
+			      	<h3>How do I sign up?</h3>
+					<p>You start with a free trial. We don’t collect your credit card until you’ve determined Squarespace is the right product for you.</p>
+			      	<h3>How do I cancel service?</h3>
+					<p>Canceling Squarespace is an easy and no-questions-asked process. It’s done online right from your site manager.</p>
+					<h3>Can I switch plans?</h3>
+					<p>Yes, at any time, in your website manager. When upgrading or downgrading your website plan, you will receive either a pro-rated charge or refund, depending on the cost of your new plan.</p>
+					<h3>What is meant by unlimited?</h3>
+					<p>Certain Squarespace packages do not have resource limits for normal usage. As per our Terms of Service, sites cannot exist for the sole purpose of file sharing.</p>
+					<h3>Do you offer email accounts?</h3>
+					<p>
+						<strong>Yes.</strong> You can purchase email accounts via G Suite email for your Squarespace domain. This also includes Google Calendar, Docs, Drive, and more. Learn more about our partnership with G Suite <a href="https://support.squarespace.com/hc/en-us/articles/206542057" target="_blank">here</a>.
+			      	</p>
+					<h3>Do you sell domains?</h3>
+					<p>
+						<strong>Yes.</strong> You can purchase multiple domains (and connect them to your Squarespace account) right from your website manager. Go to <strong>Settings</strong>, then <strong>Domains</strong> within any paid Squarespace account. Or, if you would like to start by buying a domain before you set up a website with us, you can do so <a href="/domains">here</a>.
+					</p>
+					<h3>Which currencies and countries does Squarespace support?</h3>
+					<p>With Squarespace Commerce, you can choose to charge in USD, AUD, CAD, CHF, DKK, EUR, GBP, HKD, MXN, NOK, NZD, SEK, or SGD. Visit <a href="https://stripe.com/global" target="_blank">Stripe</a> and <a href="https://www.paypal.com/webapps/mpp/country-worldwide" target="_blank">PayPal</a> to see if your country is supported..</p>
+					<h3><a href="javascript:;" target="_blank">Have more questions?</a></h3>
+					<p>Our support team is available 24/7 and usually responds in well under an hour. Visit our <a href="https://support.squarespace.com/hc/en-us/requests/new" target="_blank">Help &amp; Support Center</a> to contact them.</p>
+			  	</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-brand">
+					<a href="index.html">
+						<div class="footer-logo-full">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 24" width="168px" height="24px">
+								  <title>Squarespace</title>
+								  <path id="squarespace-logo-horizontal" style="fill: #222" d="M79.5626,5.53063l-5.24026,11.58048h1.33081l1.36326-3.03909h6.25848l1.34703,3.03909h1.39632L80.77798,5.53063H79.5626zM77.52551,12.88971l2.62856-5.84795l2.61171,5.84795H77.52551zM41.8326,10.73783c-2.52935-0.54218-3.12082-1.14987-3.12082-2.23424V8.47052c0-1.03445,0.95272-1.85615,2.44762-1.85615c1.18232,0,2.25046,0.37809,3.31798,1.24845l0.75556-1.00201c-1.1661-0.93587-2.36526-1.41254-4.0411-1.41254c-2.18433,0-3.77781,1.33081-3.77781,3.13767v0.03244c0,1.88921,1.21539,2.74335,3.86016,3.3186c2.41455,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01885,1.95472-2.56304,1.95472c-1.59285,0-2.74273-0.54218-3.94189-1.62654l-0.80485,0.95334c1.37947,1.23161,2.87437,1.8393,4.69745,1.8393c2.28353,0,3.9263-1.2809,3.9263-3.25247v-0.03244C45.57796,12.23273,44.39502,11.29623,41.8326,10.73783zM59.77015,11.36174V11.3293c0-3.17073-2.34904-5.91409-5.84795-5.91409s-5.88039,2.77642-5.88039,5.94653v0.03307c0,3.17011,2.34841,5.91346,5.84733,5.91346c1.41317,0,2.64477-0.45983,3.61434-1.21539l1.52734,1.36325l0.88721-0.96894l-1.51112-1.28152C59.26104,14.15438,59.77015,12.79113,59.77015,11.36174zM57.45418,14.40083L55.3023,12.4461l-0.87099,0.96894l2.15188,1.83992c-0.72249,0.54218-1.64277,0.85414-2.661,0.85414c-2.62793,0-4.53399-2.13566-4.53399-4.74737V11.3293c0-2.61233,1.87299-4.71492,4.50092-4.71492c2.62855,0,4.53399,2.13566,4.53399,4.74737v0.03307C58.42312,12.54468,58.07809,13.57913,57.45418,14.40083zM71.26765,12.29824c0,2.51313-1.34704,3.79465-3.46585,3.79465c-2.18494,0-3.51514-1.39632-3.51514-3.87701V5.61237h-1.29774v6.68587c0,3.25247,1.93788,4.99381,4.77981,4.99381c2.875,0,4.79665-1.74135,4.79665-5.09239V5.61237h-1.29774V12.29824zM150.96526,16.10911c-2.52997,0-4.45163-2.08637-4.45163-4.74737V11.3293c0-2.64477,1.90544-4.71492,4.45163-4.71492c1.56042,0,2.64478,0.65698,3.61372,1.57726l0.88721-0.95272c-1.14987-1.08436-2.39833-1.8237-4.4847-1.8237c-3.3835,0-5.8149,2.69406-5.8149,5.94653v0.03307c0,3.30176,2.44762,5.91346,5.76559,5.91346c2.08638,0,3.40034-0.80485,4.5995-2.02024l-0.85414-0.83792C153.57697,15.50141,152.5419,16.10911,150.96526,16.10911zM137.64406,5.53063l-5.24025,11.58048h1.3308l1.36327-3.03909h6.25848l1.34703,3.03909h1.39632l-5.24025-11.58048H137.64406zM135.60698,12.88971l2.62856-5.84795l2.61171,5.84795H135.60698zM159.83484,15.92817v-4.02425h6.2747v-1.18294h-6.2747V6.79531h7.01404V5.61237h-8.31178v11.49875h8.39352v-1.18294H159.83484zM102.27933,11.90392h6.27471v-1.18294h-6.27471V6.79531h7.01405V5.61237h-8.31179v11.49875h8.39352v-1.18294h-7.09579V11.90392zM97.54881,9.06199V9.02955c0-0.90343-0.3288-1.7089-0.88721-2.26731c-0.7225-0.72249-1.85614-1.14987-3.26868-1.14987h-4.94453v11.49875h1.29774v-4.46785h3.28554l3.3342,4.46785h1.59348l-3.53136-4.69808C96.23484,12.08486,97.54881,10.96743,97.54881,9.06199zM89.74613,11.47654V6.81153h3.5482c1.85615,0,2.94051,0.85414,2.94051,2.26731v0.03244c0,1.47868-1.23223,2.36526-2.95673,2.36526H89.74613zM116.6849,10.73783c-2.52998-0.54218-3.12144-1.14987-3.12144-2.23424V8.47052c0-1.03445,0.95271-1.85615,2.44762-1.85615c1.18294,0,2.25046,0.37809,3.31798,1.24845l0.75618-1.00201c-1.16672-0.93587-2.36588-1.41254-4.04109-1.41254c-2.18495,0-3.77843,1.33081-3.77843,3.13767v0.03244c0,1.88921,1.21601,2.74335,3.86016,3.3186c2.41517,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01823,1.95472-2.56242,1.95472c-1.59348,0-2.74335-0.54218-3.94251-1.62654l-0.80485,0.95334c1.3801,1.23161,2.87499,1.8393,4.69807,1.8393c2.28353,0,3.92567-1.2809,3.92567-3.25247v-0.03244C120.42963,12.23273,119.24731,11.29623,116.6849,10.73783zM127.9528,5.61237h-4.30376v11.49875h1.29774V13.0538h2.79202c2.44761,0,4.51777-1.28152,4.51777-3.76158V9.25915C132.25656,6.99247,130.54828,5.61237,127.9528,5.61237zM130.94197,9.3415c0,1.51112-1.24846,2.52935-3.15389,2.52935h-2.84131V6.81153h2.90745c1.85614,0,3.08775,0.85414,3.08775,2.49691V9.3415zM18.77845,6.54165c0.38683-0.38683,0.38683-1.01281,0-1.39964c-0.38679-0.38679-1.01281-0.38679-1.3996,0l-9.2369,9.2369c-1.31217,1.31217-3.44709,1.31217-4.75856,0.0007c-1.31213-1.31213-1.31213-3.44709,0-4.75922l7.43067-7.43067c0.38679-0.38683,0.38679-1.01281,0-1.39964c-0.38683-0.38679-1.01281-0.38679-1.39964,0L1.98376,8.22076c-2.08368,2.08372-2.08368,5.47477,0,7.55845c2.08372,2.08372,5.47411,2.08302,7.55779-0.00066L18.77845,6.54165zM5.06321,12.6998c0.38679,0.38679,1.01281,0.38679,1.3996,0l9.2369-9.2369c1.31213-1.31213,3.44709-1.31213,4.75856-0.0007c0.38679,0.38683,1.01281,0.38683,1.3996,0c0.38683-0.38679,0.38683-1.01277,0-1.3996c-2.08368-2.08372-5.47407-2.08302-7.55775,0.0007l-9.2369,9.2369C4.67638,11.68699,4.67638,12.31298,5.06321,12.6998zM24.93661,11.30021c-0.38679-0.38683-1.01281-0.38683-1.3996,0l-9.2369,9.2369c-1.31213,1.31213-3.44709,1.31213-4.75856,0.00066c-0.38679-0.38679-1.01281-0.38679-1.3996,0c-0.38683,0.38683-0.38683,1.01281,0,1.3996c2.08368,2.08372,5.47407,2.08302,7.55775-0.00066l9.2369-9.2369C25.32343,12.31298,25.32343,11.68699,24.93661,11.30021zM20.45826,8.22146l-9.2369,9.2369c-0.38683,0.38679-0.38683,1.01281,0,1.3996c0.38679,0.38683,1.01281,0.38683,1.3996,0l9.2369-9.2369c1.31217-1.31213,3.44709-1.31213,4.75856-0.00066c1.31213,1.31213,1.31213,3.44709,0,4.75922l-7.43067,7.43067c-0.38679,0.38679-0.38679,1.01281,0,1.3996c0.38683,0.38683,1.01281,0.38683,1.39964,0l7.43067-7.43067c2.08368-2.08368,2.08368-5.47473,0-7.55845C25.93233,6.13708,22.54194,6.13774,20.45826,8.22146z"></path>
+							</svg>
+						</div>
+						<div class="footer-logo-mark">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" width="30px" height="24px">
+							  	<title>Squarespace</title>
+							  	<path id="squarespace-logo-symbol" style="fill: #222" d="M24.93671,11.30019c-0.38681-0.38681-1.01281-0.38681-1.39961,0l-9.23691,9.23691c-1.31214,1.31214-3.44709,1.31214-4.75855,0.00068c-0.38681-0.38681-1.01281-0.38681-1.39961,0c-0.38681,0.38681-0.38681,1.01281,0,1.39961c2.0837,2.0837,5.47407,2.08302,7.55778-0.00068l9.2369-9.2369C25.32352,12.313,25.32352,11.687,24.93671,11.30019zM28.01613,8.22077c-2.0837-2.0837-5.47408-2.08302-7.55778,0.00068l-9.2369,9.2369c-0.38681,0.38681-0.38681,1.01281,0,1.39961c0.38681,0.38681,1.01281,0.38681,1.39961,0l9.2369-9.2369c1.31214-1.31214,3.4471-1.31214,4.75855-0.00068c1.31214,1.31214,1.31214,3.4471,0,4.75923l-7.43066,7.43066c-0.38681,0.38681-0.38681,1.01281,0,1.39961c0.38681,0.38681,1.01281,0.38681,1.39961,0l7.43066-7.43066C30.09984,13.69553,30.09984,10.30447,28.01613,8.22077zM21.85797,2.06261c-2.0837-2.0837-5.47408-2.08302-7.55778,0.00068l-9.2369,9.2369c-0.38681,0.38681-0.38681,1.01281,0,1.39961s1.01281,0.38681,1.39961,0l9.2369-9.2369c1.31214-1.31214,3.44709-1.31214,4.75855-0.00068c0.38681,0.38681,1.01281,0.38681,1.39961,0C22.24478,3.07541,22.24478,2.44941,21.85797,2.06261zM18.77855,5.14203c-0.38681-0.38681-1.01281-0.38681-1.39961,0l-9.2369,9.2369c-1.31214,1.31214-3.4471,1.31214-4.75855,0.00068c-1.31214-1.31214-1.31214-3.4471,0-4.75923l7.43066-7.43066c0.38681-0.38681,0.38681-1.01281,0-1.39961s-1.01281-0.38681-1.39961,0L1.98387,8.22077c-2.0837,2.0837-2.0837,5.47476,0,7.55846s5.47408,2.08302,7.55778-0.00068l9.2369-9.2369C19.16535,6.15484,19.16535,5.52884,18.77855,5.14203z"></path>
+							</svg>
+						</div>
+					</a>
+					<div class="footer-i18n-selection" data-type="currency" data-test-attribute="currency-picker">
+					        <span class="currency-symbol" style="font-size:10px;">$</span>
+					        <span class="currency-code">USD</span>
+					        <svg class="arrow-down-filled" width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <polygon id="Triangle-1" fill="#747474" transform="translate(7.500000, 4.500000) rotate(180.000000) translate(-7.500000, -4.500000) " points="7.5 -1.70530257e-13 15 9 2.27373675e-13 9"></polygon>
+							    </g>
+							</svg>						
+					</div>
+					<br class="only-tablet"/>
+					<div class="footer-i18n-selection" data-type="language">
+        				<span class="language-code">English</span>
+        				<svg class="arrow-down-filled" width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        						<polygon id="Triangle-1" fill="#747474" transform="translate(7.500000, 4.500000) rotate(180.000000) translate(-7.500000, -4.500000) " points="7.5 -1.70530257e-13 15 9 2.27373675e-13 9"></polygon>
+    						</g>
+						</svg>
+      				</div>      				
+				</div>
+				<nav class="footer-nav">
+  					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Products
+      						<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-8">
+          					<a class="footer-nav-link " href="domain-search.html" data-test-attribute="footer-nav-domains">
+          						Domains
+          					</a>
+          					<a class="footer-nav-link" href="templates.html" data-test-attribute="footer-nav-websites">
+          						Websites
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-online-stores">
+          						Online Stores
+          					</a>
+          					<a class="footer-nav-link " href="app.html" data-test-attribute="footer-nav-mobile-apps">
+          						Mobile Apps
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-logos">
+          						Logos
+          					</a>
+          					<a class="footer-nav-link is--active" href="pricing.html" data-test-attribute="footer-nav-pricing">
+          						Pricing
+          					</a>
+      						<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-feature-index">
+      							Feature Index
+      						</a>
+          					<a class="footer-nav-link " href="login.html" data-test-attribute="footer-nav-login">
+          						Login
+          					</a>
+    					</div>
+  					</div>
+ 					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Tours
+  							<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-8">
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-online-stores">
+          						Online Stores
+          					</a>
+          					<a class="footer-nav-link " href="photography-websites" data-test-attribute="footer-nav-photographers">
+          						Photographers
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-bloggers">
+          						Bloggers
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-artists">
+          						Artists
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-restaurants">
+          						Restaurants
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-musicians">
+          						Musicians
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-weddings">
+          						Weddings
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-small-businesses">
+          						Small Businesses
+          					</a>
+    					</div>
+  					</div>
+  					<div class="footer-nav-list">
+				        <h4 class="footer-nav-heading">
+				          	Company
+			          		<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+				  				<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-7">
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-about">
+          						About
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-careers">
+          						Careers
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-customers">
+          						Customers
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-press-media">
+          						Press &amp; Media
+          					</a>
+          					<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-terms-of-service">
+          						Terms of Service
+          					</a>
+          					<a class="footer-nav-link " href="privacy.html" data-test-attribute="footer-nav-privacy-policy">
+          						Privacy Policy
+          					</a>
+          					<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-contact-us">
+          						Contact Us
+          					</a>
+    					</div>
+  					</div>
+  					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Community
+							<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-6">
+          					<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-help-support">
+          						Help &amp; Support
+          					</a>
+          					<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-answers">
+          						Answers
+          					</a>
+          					<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-workshops-webinars">
+          						Workshops &amp; Webinars
+          					</a>
+       						<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-specialists">
+       							Specialists
+       						</a>
+          					<a class="footer-nav-link is--external" href="devolpers.html" target="_blank" data-test-attribute="footer-nav-developers">
+          						Developers
+          					</a>
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-circle">
+			              		Circle
+			              	</a>
+    					</div>
+  					</div>
+			      	<div class="footer-nav-list">
+			        	<h4 class="footer-nav-heading">
+			          		Follow
+				          	<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+				  				<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+			        	</h4>
+				        <div class="footer-nav-content contains-7">
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-squarespace-blog">
+			              		Squarespace Blog
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-engineering-blog">
+			              		Engineering Blog
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-service-status">
+			              		Service Status
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-instagram">
+			              		Instagram
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-facebook">
+			              		Facebook
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-twitter">
+			              		Twitter
+			              	</a>
+							<a class="footer-nav-link is--external" href="javascript:;" target="_blank" data-test-attribute="footer-nav-google-plus">
+				      			Google Plus
+				          	</a>
+				        </div>
+			      	</div>
+				</nav>
+			</div>
+			<div id="currency" class="footer-i18n-selection-page">
+				<div class="selection-page-exit-btn">
+					<svg stroke="white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+						<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+					 </svg>
+				</div>
+				<div class="currency-options-container">
+					<h2>Select your currency</h2>
+					<ul class="currency-options">
+						<li class="currentcy" name="symbtn" data-id="1">
+							<span class="cs">
+								<span class="symbol">€</span>
+								<span class="code">EUR</span>
+							</span>
+						</li>
+						<li class="currentcy is--active" name="symbtn" data-id="2">
+							<span class="cs">
+								<span class="symbol">$</span>
+								<span class="code">USD</span>		
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="language" class="footer-i18n-selection-page">
+				<div class="selection-page-exit-btn">
+					<svg stroke="white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+						<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+					 </svg>
+				</div>
+				<div class="currency-options-container">
+					<h2>Select your currency</h2>
+					<ul class="currency-options">
+						<li class="currentcy is--active" name="languagebtn">
+							<span class="cs">
+								<span class="code">English</span>
+							</span>
+						</li>
+						<li class="currentcy" name="languagebtn">
+							<span class="cs">
+								<span class="code" >Español</span>					
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div id="tooltip" class="tooltip">
+			<p class="tooltip-header"></p>
+			<p class="tooltip-body"></p>
+		</div>
+	</body>
+</html>

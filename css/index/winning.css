@@ -1,0 +1,320 @@
+.winning {
+	margin-top: 80px;
+}
+
+.winning .col-md-7{
+	padding: 0;
+}
+.winning .carousel {
+	position: absolute;
+	top: 5%;
+	left: 13%;
+	height: 80%;
+	width: 80%;
+	
+}
+.winning .item {
+	background-size: 100% 100%;
+	transition: all .5s cubic-bezier(.694,.0482,.335,1);
+}
+.winning .item:first-child {
+	background-image: url(../../img/hyde-750w.jpg);
+	
+}
+.winning .item:nth-child(2) {
+	background-image: url(../../img/foundry-750w.jpg);
+}
+.winning .item:nth-child(3) {
+	background-image: url(../../img/marta-750w.jpg);
+}
+.winning .item:nth-child(4) {
+	background-image: url(../../img/rally-750w.jpg);
+}
+.winning .item:nth-child(5) {
+	background-image: url(../../img/carson-750w.jpg);
+}
+.winning button.view-templates{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 20%;
+	margin-left: -25%;
+	margin-top: -10%;
+	background: #000;
+	color: #fff;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	opacity: 0;
+	transition: opacity .5s cubic-bezier(.694,.0482,.335,1);
+}
+.winning button.view-templates a {
+	color: #fff;
+}
+.winning .carousel-control {
+	background: none;
+	width: 8%;
+	cursor: ew-resize;
+}
+.winning .carousel-inner:hover .active{
+	opacity: 0.5;
+}
+.winning .carousel-inner:hover+button {
+	opacity: 1;
+}
+.winning .text {
+	padding-left: 5%;
+	padding-top: 50px;
+}
+.winning .text .top {
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	opacity: .8;
+	color: #7e7e7e;
+}
+.winning .text h2 {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	letter-spacing: .4em;
+    line-height: 1.8em;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.winning .text .bottom {
+	opacity: .8;
+    line-height: 2.2em;
+    font-weight: 500;
+    letter-spacing: .06em;
+    -webkit-font-smoothing: antialiased;
+}
+.winning .text button.toggle-details {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 15px 15%;
+	border: 1px #000 solid;
+	font-weight: 500;
+	letter-spacing: .15em;
+	margin-top: 20px;
+	background: none;
+}
+.winning .text button span:last-child {
+	display: inline-block;
+	transform: rotate(90deg);
+	transition: transform .4s cubic-bezier(.694,.0482,.335,1);
+}
+.winning .text button span:nth-child(2) {
+	display: none;
+}
+.winning .text .show-details span:last-child{
+	transform: rotate(-90deg);
+}
+.winning .text .show-details span:first-child{
+	display: none;
+}
+.winning .text .show-details span:nth-child(2){
+	display: inline;
+}
+.company {
+	padding-bottom: 120px;
+}
+.company h3 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: .1em;
+}
+.company .col-md-3 {
+	height: 80px;
+	margin: 25px 0;
+}
+.company .col-md-3 {
+	display: flex!important;
+	flex-direction: column;
+	justify-content: space-around;
+	overflow: hidden;
+}
+.company .img {
+	display: block;
+	margin: auto;
+	min-width: 40%;
+	height: 50px;
+	position: relative;
+	
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+.company .col-md-3:nth-child(2) .img {
+	animation: fadeslide1 8s ease 0s infinite alternate both;
+}
+.company .col-md-3:nth-child(3) .img {
+	animation: fadeslide2 6s ease 1s infinite alternate both;
+}
+.company .col-md-3:nth-child(4) .img {
+	animation: fadeslide3 10s ease 0s infinite alternate both;
+}
+.company .col-md-3:nth-child(5) .img {
+	animation: fadeslide4 6s ease 2s infinite alternate both;
+}.company .col-md-3:nth-child(6) .img {
+	animation: fadeslide5 7s ease 0s infinite alternate both;
+}
+.company .col-md-3:nth-child(7) .img {
+	animation: fadeslide6 9s ease 2s infinite alternate both;
+}.company .col-md-3:nth-child(8) .img {
+	animation: fadeslide7 7s ease 1s infinite alternate both;
+}
+.company .col-md-3:nth-child(9) .img {
+	animation: fadeslide8 8s ease 2s infinite alternate both;
+}
+.winning .details .col-md-6:first-child {
+	padding-left: 10%;
+	padding-right: 3%;
+}
+.winning .details {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.winning .details .top {
+	margin-top: 20%;
+	text-transform: uppercase;
+	opacity: .8;
+	letter-spacing: .2em;
+	font-weight: 500;
+	color: #7e7e7e;
+	font-size: 10px;
+}
+.winning .details h3 {
+	text-transform: uppercase;
+	
+	letter-spacing: .15em;
+	font-weight: 600;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.winning .details .bottom {
+	opacity: .8;
+	line-height: 1.8em;
+	letter-spacing: .08em;
+	font-weight: 500;
+	color: #7e7e7e;
+	font-size: 15px;
+	
+}
+.winning .details .col-sm-6 {
+	padding-left: 10%;
+	margin-bottom: 50px;
+}
+.winning .col-sm-6 h3{
+	font-size: 16px;
+}
+.winning .col-sm-6 .bottom {
+	font-size: 13px;
+}
+.winning .details .underline {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	height: 50px;
+	line-height: 10px;
+	font-size: 60px;
+	color: #666;
+	font-weight: 100;
+	font-family: Gotham,sans-serif;
+}
+.winning .details .underline .search-icon {
+	float: right;
+	display: block;
+	height: 20px;
+	width: 20px;
+	background-image: url(../../img/search_icon.png);
+	background-size: 100%;
+}
+.winning .details .col-sm-12 {
+	text-align: center;
+}
+.winning button.hide-details {
+	font-family: Gotham SSm,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    height: 46px;
+    width: 180px;
+    border: 1px solid #000;
+    background: none;
+}
+.winning button.hide-details span {
+	display: inline-block;
+	transform: rotate(-90deg);
+}
+.winning .link {
+	display: inline-block;
+	border-bottom: 1px solid rgba(0,0,0,.33);
+	text-transform: uppercase;
+	color: #666;
+	font-family: Gotham SSm,sans-serif;
+    font-size: 11px;
+    letter-spacing: .1em;
+    transition: border-color .2s cubic-bezier(.694,.0482,.335,1);
+}
+.winning .link:hover {
+	border-color: #000;
+}
+@keyframes fadeslide1{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/locol-86664904.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/Rodarte.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/Rodarte.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/Rodarte.jpg);}
+}
+@keyframes fadeslide2{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/ArtArticle.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/Hinge.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/Hinge.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/Hinge.jpg);}
+}
+@keyframes fadeslide3{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/KappoMasa.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/logom.png);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/logom.png);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/logom.png);}
+}
+@keyframes fadeslide4{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/Mai.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/Masa.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/Masa.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/Masa.jpg);}
+}@keyframes fadeslide5{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/MOOD.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/PartneofPurpose.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/PartneofPurpose.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/PartneofPurpose.jpg);}
+}
+@keyframes fadeslide6{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/PublicSupply.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/Refinery29.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/Refinery29.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/Refinery29.jpg);}
+}@keyframes fadeslide7{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/Shhhowercap.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/Surface.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/Surface.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/Surface.jpg);}
+}
+@keyframes fadeslide8{
+	0% {opacity: 1; top: 0; background-image: url(../../img/logos/VMagazine.jpg);}
+	25% {opacity: 0; top: 30px;}
+	50% {opacity: 0.5; top: 10px;background-image: url(../../img/logos/VanLeeuwen.jpg);}
+	75% {opacity: 1; top: 0;background-image: url(../../img/logos/VanLeeuwen.jpg);}
+	100% {opacity: 1; top:0;background-image: url(../../img/logos/VanLeeuwen.jpg);}
+}
+@-webkit-keyframes imgfadetoggle{
+	0% {opacity: 1; top: 0;}
+	50% {opacity: 0; top: 20px;}
+	100% {opacity: 1, top: 0;}
+}

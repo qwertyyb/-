@@ -1,0 +1,26 @@
+.div1{
+	height: 30px;
+	width: 100%;
+}
+.photo1{
+	height: 600px;
+	width: 100%;
+}
+.div2{
+	font-size: 30px;
+	margin-left: 240px;
+	text-align: center;
+	
+}
+.div2 ul li{
+	list-style-type: none;
+}
+.div1{
+	position: relative;
+}
+.div3{
+	float: right;
+}
+.div4{
+	margin-bottom-top:10px;
+}

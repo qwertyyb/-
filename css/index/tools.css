@@ -1,0 +1,53 @@
+.tools {
+	min-height: 600px;
+}
+.tools .row {
+	height: 600px;
+}
+.tools .col-md-6:first-child {
+	height: 100%;
+	background-image: url(../../img/connect-intro-1000w.jpg);
+	background-position: -150px 0;
+	background-size: 125%;
+}
+
+.tools .text {
+	padding-left: 5%;
+	padding-top: 12%;
+}
+.tools .text .top {
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	opacity: .8;
+	color: #7e7e7e;
+}
+.tools .text h2 {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	letter-spacing: .4em;
+    line-height: 1.8em;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.tools .text .bottom {
+	opacity: .8;
+    line-height: 2.2em;
+    font-weight: 500;
+    letter-spacing: .06em;
+    -webkit-font-smoothing: antialiased;
+}
+.tools .text button.toggle-details {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 15px 10%;
+	border: 1px #000 solid;
+	font-weight: 500;
+	letter-spacing: .15em;
+	margin-top: 20px;
+	background: none;
+}
+.tools .text button span {
+	display: inline-block;
+	transform: rotate(90deg);
+}
+

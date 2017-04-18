@@ -1,0 +1,36 @@
+@import url("font.css");
+@import url("header.css");
+@import url("main.css");
+@import url("winning.css");
+@import url("onlinestores.css");
+@import url("tools.css");
+@import url("platform.css");
+@import url("footer.css");
+
+body {
+	overflow-x: hidden;
+}
+button:hover {
+	opacity: .8;
+}
+body a, body a:hover, body a:active, body a:visited {
+	color: #121212;
+	text-decoration: none;
+}
+.text-black{
+	color: #000!important;
+}
+
+.col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-12, .col-sm-6 {
+	position: relative;
+	top: 80px;
+	opacity: 0;
+	transition: all .8s cubic-bezier(.694,.0482,.335,1);
+}
+.all-details {
+	display: none;
+}
+
+
+
+

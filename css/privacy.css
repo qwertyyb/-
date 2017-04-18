@@ -1,0 +1,143 @@
+@import url("./index/font.css");
+@import url("./index/header.css");
+@import url("./index/footer.css");
+* {
+	margin: 0;
+	padding: 0;
+}
+body a, body a:hover, body a:active, body a:visited {
+	color: #121212;
+	text-decoration: none;
+}
+header {
+	background: #000;
+}
+header div:hover {
+	opacity: .8;
+}
+header.black-bg {
+	color: white;
+}
+header.black-bg path{
+	fill: #fff;
+}
+header.black-bg .login a{
+	color: #fff;
+}
+header.black-bg .get_started {
+	color: #fff;
+	border-color: #fff;
+}
+header.black-bg .get_started a {
+	color: #fff;
+}
+header .get_started:hover {
+	background: #fff;
+}
+header .get_started:hover a {
+	color: #000;
+}
+
+.top-header {
+	height: 400px;
+	background: black;
+}
+.top-header h1{
+	font-family: Gotham,sans-serif;
+    font-size: 60px;
+	text-align: center;
+	width: 100%;
+	margin-top: 140px;
+	color: #fff;
+	font-weight: 100;
+}
+
+
+li {
+	list-style: none;
+}
+
+.main .row{
+	padding-top: 80px;
+	line-height: 21px;
+}
+.sidebar ul {
+	text-align: right;
+	padding-right: 15%;
+}
+.sidebar li {
+	text-align: right;
+	text-transform: uppercase;
+	font-family: Gotham SSm,sans-serif;
+	font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: .4;
+    transition: opacity .3s ease;
+    color: #222;
+    cursor: pointer;
+    width: 160px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.sidebar li:hover {
+	opacity: 1;
+}
+.sidebar .active {
+	opacity: 1;
+}
+.policy-details {
+	font-family: Gotham,sans-serif;
+	padding-right: 20%;
+	padding-left: 6%;
+	display: none;
+}
+body {
+	overflow-x: hidden;
+}
+.policy-details h2 {
+	font-family: Gotham,sans-serif;
+	margin-bottom: 50px;
+	padding: 0;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    color: #222;
+    margin-top: 0;
+}
+
+
+
+.sqs-block-content {
+	font-family: Gotham SSm,sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 21px;
+    color: #777;
+}
+
+.sqs-block-content>* {
+	margin-top: 12px;
+    margin-bottom: 20px;
+}
+.sqs-block-content blockquote {
+    background: #e8e8e8;
+    color: #000;
+    padding: 24px;
+    margin-top: -48px!important;
+    margin: 0;
+    border: none;
+}
+.sqs-block-content a {
+    transition: border-color .1s ease;
+    border-bottom: 1px solid #bebebe;
+    color: #222;
+}
+.sqs-block-content a:hover {
+    border-bottom-color: #222;
+}
+
+.sqs-block-content strong {
+    font-weight: 500;
+    color: #222;
+}

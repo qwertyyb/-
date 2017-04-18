@@ -1,0 +1,504 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.background{
+	width:100%;
+	height: 623px;
+	
+	background-image: url(../img/background.jpg);
+    background-size: 100%;
+    background-position-y: -190px;
+}
+
+.header{
+
+	width: 1212.42px;
+	height: 67px;
+	margin-top: px;
+	padding-left: 68.3px;
+	padding-right: 68.3px;
+	padding-top: 40px;
+}
+
+.logo1 {
+	fill: white;
+	margin-left: 0.01%;
+	margin-top: 20px;
+}
+.DOCS{
+	margin-top: -148.5px;
+	margin-left: 21.7%;
+	line-height: 15px;
+    font-family: Gotham SSm,Gotham,monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: #A09F9F;
+	height: 15px;
+	width: 46.35px;
+}
+.TOOLS{
+	margin-top: -15px;
+	margin-left: 28.3%;
+	line-height: 15px;
+	font-family: Gotham SSm,Gotham,monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: #A09F9F;
+	height: 15px;
+	width: 46.35px;
+}
+.GETSTARTED1{
+	border: solid;
+	border-color: #FFFFFF;
+	border-width:1px ;
+	margin-top:-41px ;
+	height: 65px;
+	width: 228.75px;
+	margin-left: 81.1%;
+	font-family: Gotham SSm,Gotham,monospace;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height:67px;
+    
+    cursor: pointer;
+    transition: background-color 170ms ease-out,color 170ms ease-out;
+    transition-property: background-color, color;
+    transition-duration: 170ms, 170ms;
+    transition-timing-function: ease-out, ease-out;
+    transition-delay: initial, initial;
+	
+}
+.GETSTARTED1:hover{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.BuildAnything{
+	margin-top: 114px;
+	font-size: 4vw;
+    font-weight: 300;
+    color: white;
+    font-family: Gotham,monospace;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.subtitle{
+	height: 78px;
+	width: 640px;
+	max-width: 640px;
+    margin:1.5em auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+    font-family: Gotham SSm,Gotham;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 26px;
+}
+.GETSTARTED2{
+
+	background-color: #FFFFFF;
+	border-width:1px ;
+	margin-top:33px ;
+	height: 65px;
+	width: 228px;
+	margin-left: 41.5%;
+	font-family: Gotham SSm,Gotham,monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    line-height:67px;
+    cursor: pointer;
+ /*   transition: background-color 170ms cubic-bezier(.55, 0, .1, 1);*/''
+ 
+    transition: background-color 170ms cubic-bezier(.55, 0, .1, 1);
+    transition-property: background-color;
+    transition-duration: 170ms;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: initial;
+}
+.GETSTARTED2:hover{
+	background-color:#C7C7C8;
+}
+
+.READABOUT{
+	width: 100%;
+	height: 72px;
+	background-color: #5AA1B1;
+	text-align: center;
+	color: #FFFFFF;
+	line-height: 72px;	
+    font-family: Gotham SSm,Gotham;
+    font-weight: 300;
+    vertical-align: baseline;
+    font-size: 12px;
+    letter-spacing: .15em;
+/*    text-transform: uppercase;*/
+    cursor: pointer;
+    transition: background 170ms cubic-bezier(.55, 0, .1, 1);
+    transition-property: background;
+    transition-duration: 170ms;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: initial;
+}
+.READABOUT:hover{
+	background-color:#5AB8F8;
+}
+.header2{
+	width: 1212.42px;
+	height: 67px;
+	margin-top: px;
+	padding-left: 68.3px;
+	padding-right: 68.3px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: white;
+	
+	z-index: 500;
+	position: fixed;
+	top: 0px;
+}
+
+.logo2{
+	fill: black;
+	margin-left: 0.01%;
+	margin-top: 20px;
+}
+.GETSTARTED3{
+	border: solid;
+	border-color: black;
+	border-width:1px ;
+	margin-top:-41px ;
+	height: 65px;
+	width: 228.75px;
+	margin-left: 81.1%;
+	
+	font-family: Gotham SSm,Gotham,monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    line-height:65px;
+    
+    cursor: pointer;
+    transition: background-color 170ms cubic-bezier(.55, 0, .1, 1),color 170ms cubic-bezier(.55, 0, .1, 1);
+    transition-property: background-color, color;
+    transition-duration: 170ms, 170ms;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1), cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: initial, initial;	
+}
+.GETSTARTED3:hover{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.products{
+	width: auto;
+	height: 460px;
+/*	margin-top: 15px;*/
+	padding-top: 67px;
+	padding-left: 68.3px;
+	padding-right: 68.3px;
+	background-color: #F5F5F5;
+}
+
+.twoproducts{
+	width: 1000px;
+	height: 389.53px;
+
+    margin-left: 106.2px;
+    margin-right: 106.2px;
+}
+.WEBPLATFORM{
+	width: 439.46px;
+	height: 329.53px;
+	margin-left: 10px;
+	padding: 20.27px;
+	background-color: #F5F5F5;
+	float: left;
+	cursor: pointer;
+	transition: background-color 170ms cubic-bezier(.55, 0, .1, 1);
+    transition-property: background-color;
+    transition-duration: 170ms;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: initial;
+}
+.WEBPLATFORM:hover {
+	background: #fff;
+}
+.WEBPLATFORM:hover .GETSTARTED4{
+	background-color: #000;
+	color: #fff;
+	
+}
+.TOOLSMUDELS{	
+	width: 439.46px;
+	height: 329.53px;
+	margin-right: 10px;
+	padding: 20.27px;
+	background-color: #F5F5F5;
+	float: right;
+	cursor: pointer;
+	transition: background-color 170ms cubic-bezier(.55, 0, .1, 1);
+    transition-property: background-color;
+    transition-duration: 170ms;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: initial;
+}
+.TOOLSMUDELS:hover{
+	background: #fff;
+}
+.TOOLSMUDELS:hover .VIEWLIST{
+	background-color: #000;
+	color: #fff;
+}
+#webplatformlogo{
+	width: 100px;
+	height: 100px;
+	fill:#AAAAAA ;
+}
+
+#webplatform{
+	margin-top: 28px;
+	font-family: Gotham SSm;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #0f1113;
+}
+#article{
+	width: 439.469px;
+	height: 96px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+	font-size: 15px;
+    color: rgba(15,17,19,0.5);
+    margin: 20px 0;
+    line-height: 1.6em;
+    font-family: Gotham SSm,Gotham,monospace;
+    font-weight: 300; 
+ 
+
+}
+.GETSTARTED4{
+	border: solid;
+	border-color: black;
+	border-width:1px ;
+	height: 46.8px;
+	width: 181px;
+	font-family: Gotham SSm,Gotham,monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    line-height:46.8px;
+    transition: background-color 170ms ease-out,color 170ms ease-out;
+    transition-property: background-color, color;
+    transition-duration: 170ms, 170ms;
+    transition-timing-function: ease-out, ease-out;
+    transition-delay: initial, initial;
+}.VIEWLIST{
+	border: solid;
+	border-color: black;
+	border-width:1px ;
+	height: 46.8px;
+	width: 153.922px;
+	font-family: Gotham SSm,Gotham,monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    line-height:46.8px;
+    transition: background-color 170ms ease-out,color 170ms ease-out;
+    transition-property: background-color, color;
+    transition-duration: 170ms, 170ms;
+    transition-timing-function: ease-out, ease-out;
+    transition-delay: initial, initial;
+}
+
+.synopsis{
+	width: 1212.41px;
+	height: 687.063px;
+	padding-top: 67.6px;
+	padding-left: 68.3px;
+	padding-right: 68.3px;
+}
+#synopsis-title{
+	font-size: 36px;
+	line-height: 1.4em;
+    font-weight: 300;
+    color: #0f1113;
+    font-family: Gotham,monospace;
+    text-align: center;
+}
+#synopsis-description{
+	width: 640px;
+	height: 48px;
+	margin-top: 20px;
+	margin-left: 286.203px;
+	margin-right: 286.203px;
+	
+	max-width: 640px;
+    margin: 20px auto 0;
+    font-size: 15px;
+    line-height: 1.6em;
+    color: rgba(15,17,19,0.6);
+    text-align: center;
+    font-family: Gotham SSm,Gotham,monospace;
+    font-weight: 300;
+}
+
+.synopsis-example{
+	/*position: absolute;*/
+	width: 1212.41px;
+	height: 529.52px;
+	margin-top: 40.506px;
+	display: none;
+
+}
+.example-show {
+	display: block;
+}
+/*#synopsis-example1{
+	z-index: -1;;
+}
+#synopsis-example2{
+	z-index: 1;
+}
+#synopsis-example3{
+	z-index: 3;
+}
+#synopsis-example4{
+	z-index: 5;
+}*/
+
+#synopsis-caption{
+	font-size: 10px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: rgba(15,17,19,0.4);
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-align: center;
+    font-family: Gotham SSm,Gotham,monospace;
+    cursor: pointer;
+    
+    transition: color 170ms cubic-bezier(.55, 0, .1, 1);
+    transition-property: color;
+    transition-duration: 170ms;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: initial;
+}
+#synopsis-caption:hover{
+	color: black;
+}
+#synopsis-image{
+	width: 800px;
+	height: 500px;
+	margin-top: 13.520px;
+	margin-left: 205.203px;
+	margin-right: 205.203px;
+	background-color: cyan;
+}
+.example-img{
+	width: 100%;
+    display: block;
+    cursor: e-resize;
+}
+.features{
+	width: 1102.190.px;
+	height: 933.537px;
+	padding-top: 61.455px;
+	padding-bottom: 61.455px;
+	/*padding-left: 68.3px;
+	padding-right: 68.3px;*/
+	padding-left:62.091px;
+	padding-right: 62.091px;
+	background-color: #0F1113;
+}
+.features-header{
+	width: 1212.41px;
+	height: 36px;
+	
+	font-size: 36px;
+	font-weight: 300;
+    text-align: center;
+    color: white;
+    font-family: Gotham,monospace;
+    line-height: 1;
+}
+.features-description{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 20.9519%;
+	margin-right: 20.9519%;
+	width: 640px;
+	height: 72px;
+	
+	max-width: 640px;
+    margin: 1em auto;
+    font-size: 15px;
+    line-height: 1.6em;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    font-family: Gotham SSm,Gotham,monospace;
+    font-weight: 300;
+}
+.features-grid{
+	margin-top: 30.727px;
+    width: 1212px;
+    height: 781.449px;
+    margin-left: auto;
+    margin-right: auto;
+/*    background-color: azure;*/
+}
+.features-grid-item{
+	display: block;
+	flex: 1 1 25%;
+    /*box-sizing: border-box;*/
+	
+	padding: 39.96px;
+	height: 291px;
+	width: 223.109px;
+/*	background-color: #FF0000;*/
+	float: left;
+}
+.features-grid-item-icon{
+	height: 90.818px;
+	width: 90px;
+
+}
+.features-grid-item-svg{
+	width: 500px;
+	height: 500px;
+}
+.features-grid-item-title{
+	margin-top: 28px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    font-family: Gotham SSm;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: white;
+}
+.features-grid-item-description{
+	display: block;
+	font-size: 14px;
+    line-height: 1.6em;
+    color: rgba(255,255,255,0.5);
+    font-family: Gotham SSm,Gotham,monospace;
+    font-weight: 300;  
+    
+}
+
+
+
+

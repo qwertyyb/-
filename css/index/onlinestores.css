@@ -1,0 +1,139 @@
+.stores {
+	background-color: #000;
+	background-image: url(../../img/business-devices-1500w.jpg);
+	background-position: 200px 0;
+	background-repeat: no-repeat;
+	
+	background-size: 100%;
+	min-height: 700px;
+}
+
+.stores .text {
+	font-family: Gotham,sans-serif;
+	padding-left: 8%;
+	padding-top: 15%;
+	color: #fff;
+}
+.stores .text .top {
+	font-family: Gotham SSm,sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	opacity: .8;
+	font-weight: 400;
+	font-size: 10px;
+}
+.stores .text h2 {
+	font-family: Gotham,sans-serif;;
+	letter-spacing: .4em;
+    line-height: 1.8em;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.stores .text .bottom {
+	font-family: Gotham SSm,sans-serif;
+	opacity: .8;
+    line-height: 2.2em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+}
+.stores .text button.toggle-details {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 15px 12%;
+	border: 1px #fff solid;
+	letter-spacing: .15em;
+	margin-top: 20px;
+	background:none;
+	color: #fff;
+	font-family: Gotham SSm,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+}
+.stores .text button span:last-child {
+	display: inline-block;
+	transform: rotate(90deg);
+	transition: transform .4s cubic-bezier(.694,.0482,.335,1);
+}
+.stores .text button span:nth-child(2) {
+	display: none;
+}
+.stores .text .show-details span:last-child{
+	transform: rotate(-90deg);
+}
+.stores .text .show-details span:first-child{
+	display: none;
+}
+.stores .text .show-details span:nth-child(2){
+	display: inline;
+}
+.stores .details {
+	margin-top: 100px;
+	font-family: Gotham SSm,sans-serif;
+}
+.stores .details:first-child {
+	margin-top: 450px;
+}
+.stores .col-md-6 {
+	color: #fff;
+	font-family: Gotham SSm,sans-serif;
+}
+.stores .details .top {
+	margin-top: 20%;
+	text-transform: uppercase;
+	opacity: .8;
+	letter-spacing: .2em;
+	font-weight: 400;
+	color: #fff;
+	font-size: 10px;
+	font-family: Gotham SSm,sans-serif;
+}
+.stores .details h3 {
+	text-transform: uppercase;
+	font-family: Gotham SSm,sans-serif;
+	letter-spacing: .15em;
+	font-weight: 500;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.stores .details .bottom {
+	opacity: .8;
+	line-height: 1.8em;
+	letter-spacing: .04em;
+	font-weight: 400;
+	color: #fff;
+	font-size: 15px;
+	font-family: Gotham SSm,sans-serif;
+	
+}
+.stores .details .col-sm-6 h3{
+	font-size: 16px;
+	color: #fff;
+	font-family: Gotham SSm,sans-serif;
+}
+.stores .details .col-sm-6 .bottom {
+	font-size: 13px;
+	font-family: Gotham SSm,sans-serif;
+}
+.stores .details .col-sm-12 {
+	text-align: center;
+}
+.stores button.hide-details {
+	font-family: Gotham SSm,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    height: 46px;
+    width: 180px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+}
+.stores button.hide-details span {
+	display: inline-block;
+	transform: rotate(-90deg);
+	
+}
