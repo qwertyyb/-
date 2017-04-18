@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link type="text/css" rel="stylesheet" href="css/yuanpricing.css" />
+		<script src="lib/animate-text.min.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="css/SquareSpace.css" />
+		<title>Domain Name Search —— Squarespace</title>
+		<script src="lib/jquery.min.js"></script>
+		<script src="js/js.js"></script>
+		<style>
+		   .p
+		   {
+		   	margin-left: 200px;
+		   	margin-top: 170px;
+		    font-size: 25px;
+		   }
+		   .pp
+		   {
+		   	
+		   	margin-left: 200px;
+		    font-size: 18px;
+		   }
+		   .shuru
+		   {
+		   	 border: none;
+		   	 outline: none;
+		   	 margin-left: 200px;
+		   	 width: 1000px;
+		   	 height: 120px;
+		   	 background: rgba(0,0,0,0);
+			 font-size: 100px;
+			 color: lightgrey;
+			 z-index: 10000;
+		   }
+		   .rrr
+		   {
+		   	 position: absolute;
+		   	 top: 322px;
+		   	 border: none;
+		   	 outline: none;
+		   	 margin-left: 200px;
+		   	 width: 1000px;
+		   	 height: 120px;
+		   	 background: rgba(0,0,0,0);
+			 font-size: 100px;
+			 color: lightgrey;
+		   z-index: -1;
+		   }
+			.video
+			{
+				width: 100%;
+				height: 80%;
+				z-index: -100;
+			}
+			
+			.diceng
+			{
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: -92px;
+				right: 0;
+				opacity: 0.7;
+				background: rgba(0,0,0,0.7);
+				z-index: 500;
+				transition: 3s;
+				display: block;
+				border: 1px solid black;
+				color: white;	
+			}
+			.header{
+				background: rgba(0,0,0,0);
+			}
+			.zindex{
+				z-index: 1000;
+			}
+						
+			
+			
+			.guding
+			{
+				position: absolute;
+				width: 299px;
+				height: 76px;
+				left: 60px;
+				bottom: 60px;
+				background:rgba(0,0,0,0);
+			}
+			.guding-1
+			{
+				margin-top: 20px;
+				color: white;
+				width: 30px;
+				height: 24px;
+				float: left;
+			}
+			.gudingwenzi
+			{
+				color: white;
+				width: 269px;
+				height: 76px;
+				margin-left: 50px;
+			}
+			.gudingwenzi-1
+			{
+				font-size: 20px;
+			}
+			
+			.gudingwenzi-2
+			{
+				cursor: pointer;
+				z-index: 2000;
+				position: absolute;
+				opacity: 0.7;
+			}
+			.gudingwenzi-2:hover
+			{
+				opacity: 1;
+			}
+			
+			
+			.yincang
+			{
+				background-color: black;
+				margin-top: 0px;
+				display: none;
+				z-index: 3000;
+				position: fixed;/*fixed相对于屏幕*/
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+			
+			.exit
+			{
+				position: absolute;
+				top: 16px;
+				right:23px;
+				width: 30px;
+				height: 30px;
+				opacity: 0.7;
+				z-index: 3500;
+			}
+			
+			.exit:hover {
+				opacity: 1;
+			}
+			
+			.yincang-0
+			{
+				width: 100%;
+				height: 216px;
+				margin-top: 200px;
+			}
+			
+			
+			.yincang-1
+			{
+				width: 336px;
+				height: 216px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				background:rgba(0,0,0,0);
+				
+			}
+			.yincang-2
+			{
+				width: 336px;
+				height: 40%;
+				margin-top: 0px;
+				color: white;
+				text-align: center;
+			}
+			.yincang-3{
+				width: 332px;
+				height: 30%;
+				font-size: 40px;
+				background:rgba(0,0,0,0);
+				border-bottom: 1px solid grey;
+				border-left: 0px;
+				border-top: 0px;
+				border-right: 0px;
+				outline: none;
+				color: white;
+			}
+			.yincang-4
+			{
+				width: 336px;
+				
+				text-align: center;
+				line-height: 50px;
+				background-color: white;
+				position:absolute;
+				bottom: 0;
+				cursor: pointer;
+			}
+			u
+			{
+				cursor: pointer;
+			}
+			
+			.transfer{
+				background: url(img/domains-transfer-background.min.jpg) no-repeat;
+				width: 100%;
+				height:300px;
+				padding-top: 205px;
+				background-size: 100%;
+			}
+			
+			
+			.transfer-1
+			{
+				width: 100%;
+				height: 224px;
+				
+				background: rgba(0,0,0,0);
+				padding-left: 50px;
+			}
+			.transfer-2
+			{
+				height: 224px;
+				width: 463px;
+	        
+				background: rgba(0,0,0,0);
+			}
+			
+			.transfer-3
+			{
+				width: 300px;
+				height: 60px;
+				background-color: black;
+				color: white;
+				margin-bottom: 0px;
+				text-align: center;
+				line-height: 60px;
+				cursor: pointer;
+				z-index:2300;
+				transition: 1s;
+			}
+			
+		    .transfer-3:hover
+		    {
+		    	background-color: grey;
+		    	
+		    	
+		    }
+		    
+		    
+		   
+		    
+		    
+		    .section-3
+		    {
+		    	width: 100%;
+		    	height: 615px;
+		    	background-color: #F7F7F7;
+		    	
+		    	display: flex;
+		    	align-items: center; 
+		    	/*displayflex和alignitem是纵向排列*/
+		    }
+		    
+		    .section-3-picture
+		    {
+		    	width: 65%;
+		    	height: 615px;
+		    	position: absolute;
+		    	left: 0px;
+		    	
+		    }
+		    
+		    .section-3-1
+		    {
+		    	width: 35%;
+		    	height: 180px;
+		    	position:absolute;
+		    	right: 0px;
+		    
+		    	
+		    }
+		    
+		    .section-4
+		    {
+		    	width: 100%;
+		    	height: 960px;
+		    	position: relative;
+		    	z-index: -50;
+		    }
+		    
+		    .section-4-picture
+		    {
+		    	position: absolute;
+				right: 0px;
+				bottom: 0px;
+		    }
+		    
+		    .section-4-picture-1
+		    {
+		    	position: absolute;
+		    	left: 0px;
+		    	top: -500px;
+		    	display: block;
+		    	opacity: 0;
+		    	z-index: -10;
+		    }
+		    
+		    .section-4-1
+		    {
+		    	position: absolute;
+		    	top: 100px;
+		    	text-align: center;
+		    	width: 100%;
+		    	height: 140px;
+		    	
+		    }
+		    
+		     .section1
+		    {
+		    	width: 100%;
+		    	height: 200px;
+		        position: relative;
+		        background-color: #F7F7F7;
+		       
+		    }
+		    
+		   
+		    
+		    .section11
+		    {
+		    	width: 263px;
+		    	height: 163px;
+		    	position: absolute;
+		    	top: 183px;
+		    	left: 10%;
+		    	
+		    	display: block;
+		    	opacity: 0;
+		    	z-index: -100;
+		    }
+			
+			
+			.section12
+		    {
+		    	width: 263px;
+		    	height: 163px;
+		    	position: absolute;
+		    	top: 183px;
+		    	left: 550px;
+		    	
+		    	display: block;
+		    	opacity: 0;
+		    	z-index: -100;
+
+		    }
+		    
+		    .section13
+		    {
+		    	width: 263px;
+		    	height: 163px;
+		    	position: absolute;
+		    	top: 183px;
+		    	right: 10%;
+		    	display: block;
+		    	opacity: 0;
+		    	z-index: -100;
+
+		    }
+		    
+		    .wenzi
+		    {
+		        width: 60%;
+		    	height: 100px;
+		    	text-align: center;
+		    	position: absolute;
+		    	top: 150px;
+		    	left: 20%;
+		    }
+		    
+		    
+		    
+		    
+		    .ipad
+		    {
+		    	
+		    	width: 100%;
+		    	height: 800px;
+		    	position: relative;
+		    	
+		    }
+		    
+		    .ipad-picture
+		    {
+		    	width: 708px;
+		    	height: 498.63px;
+		    	position: absolute;
+		    	top: 280px;
+		    	background-image: url(img/ipad.png);
+		    	background-size: 100%;
+		    	margin-left: 23%;
+		    }
+			.ipad-picture .waves-pic {
+				height: 80%;
+				width: 75%;
+				margin-top: 4%;
+				margin-left: 12%;
+				background-image:url(img/parked-page.jpg);
+				background-size: 100%;
+			}
+			.pics {
+				position: relative;
+			}
+			.pics div {
+				transition: all .3s;
+			}
+		
+			.pics .pic-min {
+				top: 570px;
+				left: 400px;
+			  width: 211px;
+			  height: 149px;
+				transition: all 0.5s linear;
+				position: absolute;
+			}
+			
+			.left-template-1
+			{
+				transition: all 0.5s linear;
+				position: absolute;
+				width: 245px;
+				height: 170px;
+				top: 300px;
+				left: 600px;
+			}
+			
+			.left-icon-chat
+			{
+				
+				transition: all 0.5s linear;
+				position: absolute;
+				top: 500px;
+				left: 300px;
+				width: 55px;
+				height: 51px;
+			}
+			
+			.left-template-3
+			{
+			    
+				transition: all 0.3s linear;
+				position: absolute;
+				top: 450px;
+				left: 400px;
+			}
+			
+			.left-icon-spreadsheets
+			{
+				transition: all 0.2s linear;
+				position: absolute;
+				top: 300px;
+				left: 700px;
+				width: 51px;
+				height: 66px;
+			}
+			
+			.right-template-1
+			{
+				width:219px;
+				height: 154px;
+				transition: all 0.1s linear;
+				position: absolute;
+				top: 540px;
+				right:380px;
+				
+			}
+			
+			
+			.right-template-2
+			{
+				transition: all 0.1s linear;
+				position: absolute;
+				width: 159px;
+				height: 139px;
+				top: 380px;
+				right: 420px;
+			}
+			
+			.right-icon-drive
+			{
+				transition: all 0.2s linear;
+				position: absolute;
+				width: 41px;
+				height: 45px;
+				top: 400px;
+				right: 420px;
+			}
+			
+		
+		    .right-icon-slides
+		    {
+		    	transition: all 0.2s linear;
+				position: absolute;
+				width: 54px;
+				height: 65px;
+				right: 520px;
+				top: 600px;
+				
+		    }
+		    
+		    .right-template-3{
+		    	transition: all 0.2s linear;
+				position: absolute;
+				width: 230px;
+				height: 164px;
+				top: 430px;
+				right: 420px;
+				
+		    }
+		    .sibufenwenzi
+		    {
+		    	width: 100%;
+		    	height: 666px;
+		    	background-color: #F7F7F7;
+		    	position: relative;
+		    }
+		    
+		    .sibufenwenzi-1
+		    {
+		    	width: 422px;
+		    	height: 139px;
+		    	background: rgba(0,0,0,0);
+		    	position: absolute;
+		    	top: 150px;
+		    	left: 150px;
+		    }
+		    
+		    .sibufenwenzi-2
+		    {
+		    	width: 422px;
+		    	height: 139px;
+		    	background: rgba(0,0,0,0);
+		    	position: absolute;
+		    	top: 150px;
+		    	right: 150px;
+		    	
+		    }
+		    
+		    .sibufenwenzi-3
+		    {
+		    	width: 422px;
+		    	height: 139px;
+		    	background: rgba(0,0,0,0);
+		    	position: absolute;
+		    	bottom: 150px;
+		    	left: 150px;
+		    }
+		    
+		    .sibufenwenzi-4
+		    {
+		    	width: 422px;
+		    	height: 139px;
+		    	background: rgba(0,0,0,0);
+		    	position: absolute;
+		    	bottom: 150px;
+		    	right: 150px;
+		    }
+			
+			
+		</style>
+		
+		
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".footer-i18n-selection").on('click', function(){
+					
+					var btntype = $(this).attr("data-type");
+					if(btntype == 'currency')
+					{
+						$("#currency").fadeIn(500);
+					}
+					else if(btntype == 'language')
+					{
+						$("#language").fadeIn(500);
+					}
+				});
+				$(".selection-page-exit-btn").on('click', function(){
+					$(this).parent().fadeOut(500);
+				});
+				$(".footer-i18n-selection-page").click(function(){
+					$(this).fadeOut(500);
+				});
+				$("[name='symbtn']").click(function(){
+					$(".currency-symbol").text($(this).find(".symbol").text());
+					$(".currency-code").text($(this).find(".code").text());
+					$(this).addClass("is--active");
+					$(this).nextAll().removeClass("is--active");
+					$(this).prevAll().removeClass('is--active');
+				});
+				$("[name='languagebtn']").click(function(){
+					$(".language-code").text($(this).find('.code').text());
+					$(this).addClass('is--active');
+					$(this).nextAll().removeClass("is--active");
+					$(this).prevAll().removeClass('is--active');
+				});
+			});
+		</script>
+		
+	</head>
+	<body style="margin: 0px;">
+		<div class="guding" id="guding">
+			<div class="guding-1">
+				<svg width="30px" height="24px" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+				    <title>double-arrow</title>
+				    <desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="desktop-reskin-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <g id="desktop" transform="translate(-167.000000, -922.000000)" stroke="#FFFFFF">
+				            <g id="already" transform="translate(167.000000, 905.000000)">
+				                <g id="double-arrow" transform="translate(0.000000, 18.000000)">
+				                    <g id="Group-2">
+				                        <polyline id="Path-2" stroke-width="1.5" points="7.81049499 22.0394457 2.19147759 14.2030991 29.8611787 14.2030991"></polyline>
+				                        <polyline id="Path-2" stroke-width="1.5" transform="translate(13.834851, 3.918173) rotate(-180.000000) translate(-13.834851, -3.918173) " points="5.61901741 7.83634661 0 0 27.6697011 0"></polyline>
+				                    </g>
+				                </g>
+				            </g>
+				        </g>
+				    </g>
+				     		
+			</div>
+			<div class="gudingwenzi">
+				<span class="gudingwenzi-1">Already have a domain?<br /></span>
+				<span class="gudingwenzi-2" id="gudingwenzi-2"> your domain to Squarespace <br/>in just a few easy steps.</span>
+			</div>
+			
+		</div>
+		
+		
+		<div class="video" >
+			<video autoplay="true" loop="-1" width="100%" id="videdfdfdo">
+				<source src="img/domain.mp4" type="video/mp4">
+			</video>		
+		</div>
+		
+		<div class="yincang" id="yincang">
+			<div>
+				<a class="exit" id="exit">
+		  			<div class="www-x light">
+		    			<svg stroke="white" stroke-width="1px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+							<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+							<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+						</svg>
+		  			</div>
+				</a>
+			</div>
+			<div class="yincang-0">
+				<div class="yincang-1">
+					<div class="yincang-2" >
+						Transfer Domain<br />
+Transfer a domain from another provider to Squarespace. Domains purchased in the last 60 days can't be transferred.<u> Learn more</u>
+						
+					</div>
+				<input class="yincang-3" placeholder="pizza.club" id="input"/><br />
+					<div class="yincang-4">Continue</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<!--透明底层-->
+		<div class="diceng" id="www">
+			<header id="header-2016" class="header header-banner">
+				<div class="header-content header-content-box">
+					<h1 class="logo www-layout">
+						<a href="index.html">
+							<span>
+								<svg height="24px" width="168px" viewBox="0 0 168 24" xmlns="http://www.w3.org/2000/svg">
+									<title>Squarespace</title>
+									<path id="squarespace-logo-horizontal" style="fill: #fff" d="M79.5626,5.53063l-5.24026,11.58048h1.33081l1.36326-3.03909h6.25848l1.34703,3.03909h1.39632L80.77798,5.53063H79.5626zM77.52551,12.88971l2.62856-5.84795l2.61171,5.84795H77.52551zM41.8326,10.73783c-2.52935-0.54218-3.12082-1.14987-3.12082-2.23424V8.47052c0-1.03445,0.95272-1.85615,2.44762-1.85615c1.18232,0,2.25046,0.37809,3.31798,1.24845l0.75556-1.00201c-1.1661-0.93587-2.36526-1.41254-4.0411-1.41254c-2.18433,0-3.77781,1.33081-3.77781,3.13767v0.03244c0,1.88921,1.21539,2.74335,3.86016,3.3186c2.41455,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01885,1.95472-2.56304,1.95472c-1.59285,0-2.74273-0.54218-3.94189-1.62654l-0.80485,0.95334c1.37947,1.23161,2.87437,1.8393,4.69745,1.8393c2.28353,0,3.9263-1.2809,3.9263-3.25247v-0.03244C45.57796,12.23273,44.39502,11.29623,41.8326,10.73783zM59.77015,11.36174V11.3293c0-3.17073-2.34904-5.91409-5.84795-5.91409s-5.88039,2.77642-5.88039,5.94653v0.03307c0,3.17011,2.34841,5.91346,5.84733,5.91346c1.41317,0,2.64477-0.45983,3.61434-1.21539l1.52734,1.36325l0.88721-0.96894l-1.51112-1.28152C59.26104,14.15438,59.77015,12.79113,59.77015,11.36174zM57.45418,14.40083L55.3023,12.4461l-0.87099,0.96894l2.15188,1.83992c-0.72249,0.54218-1.64277,0.85414-2.661,0.85414c-2.62793,0-4.53399-2.13566-4.53399-4.74737V11.3293c0-2.61233,1.87299-4.71492,4.50092-4.71492c2.62855,0,4.53399,2.13566,4.53399,4.74737v0.03307C58.42312,12.54468,58.07809,13.57913,57.45418,14.40083zM71.26765,12.29824c0,2.51313-1.34704,3.79465-3.46585,3.79465c-2.18494,0-3.51514-1.39632-3.51514-3.87701V5.61237h-1.29774v6.68587c0,3.25247,1.93788,4.99381,4.77981,4.99381c2.875,0,4.79665-1.74135,4.79665-5.09239V5.61237h-1.29774V12.29824zM150.96526,16.10911c-2.52997,0-4.45163-2.08637-4.45163-4.74737V11.3293c0-2.64477,1.90544-4.71492,4.45163-4.71492c1.56042,0,2.64478,0.65698,3.61372,1.57726l0.88721-0.95272c-1.14987-1.08436-2.39833-1.8237-4.4847-1.8237c-3.3835,0-5.8149,2.69406-5.8149,5.94653v0.03307c0,3.30176,2.44762,5.91346,5.76559,5.91346c2.08638,0,3.40034-0.80485,4.5995-2.02024l-0.85414-0.83792C153.57697,15.50141,152.5419,16.10911,150.96526,16.10911zM137.64406,5.53063l-5.24025,11.58048h1.3308l1.36327-3.03909h6.25848l1.34703,3.03909h1.39632l-5.24025-11.58048H137.64406zM135.60698,12.88971l2.62856-5.84795l2.61171,5.84795H135.60698zM159.83484,15.92817v-4.02425h6.2747v-1.18294h-6.2747V6.79531h7.01404V5.61237h-8.31178v11.49875h8.39352v-1.18294H159.83484zM102.27933,11.90392h6.27471v-1.18294h-6.27471V6.79531h7.01405V5.61237h-8.31179v11.49875h8.39352v-1.18294h-7.09579V11.90392zM97.54881,9.06199V9.02955c0-0.90343-0.3288-1.7089-0.88721-2.26731c-0.7225-0.72249-1.85614-1.14987-3.26868-1.14987h-4.94453v11.49875h1.29774v-4.46785h3.28554l3.3342,4.46785h1.59348l-3.53136-4.69808C96.23484,12.08486,97.54881,10.96743,97.54881,9.06199zM89.74613,11.47654V6.81153h3.5482c1.85615,0,2.94051,0.85414,2.94051,2.26731v0.03244c0,1.47868-1.23223,2.36526-2.95673,2.36526H89.74613zM116.6849,10.73783c-2.52998-0.54218-3.12144-1.14987-3.12144-2.23424V8.47052c0-1.03445,0.95271-1.85615,2.44762-1.85615c1.18294,0,2.25046,0.37809,3.31798,1.24845l0.75618-1.00201c-1.16672-0.93587-2.36588-1.41254-4.04109-1.41254c-2.18495,0-3.77843,1.33081-3.77843,3.13767v0.03244c0,1.88921,1.21601,2.74335,3.86016,3.3186c2.41517,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01823,1.95472-2.56242,1.95472c-1.59348,0-2.74335-0.54218-3.94251-1.62654l-0.80485,0.95334c1.3801,1.23161,2.87499,1.8393,4.69807,1.8393c2.28353,0,3.92567-1.2809,3.92567-3.25247v-0.03244C120.42963,12.23273,119.24731,11.29623,116.6849,10.73783zM127.9528,5.61237h-4.30376v11.49875h1.29774V13.0538h2.79202c2.44761,0,4.51777-1.28152,4.51777-3.76158V9.25915C132.25656,6.99247,130.54828,5.61237,127.9528,5.61237zM130.94197,9.3415c0,1.51112-1.24846,2.52935-3.15389,2.52935h-2.84131V6.81153h2.90745c1.85614,0,3.08775,0.85414,3.08775,2.49691V9.3415zM18.77845,6.54165c0.38683-0.38683,0.38683-1.01281,0-1.39964c-0.38679-0.38679-1.01281-0.38679-1.3996,0l-9.2369,9.2369c-1.31217,1.31217-3.44709,1.31217-4.75856,0.0007c-1.31213-1.31213-1.31213-3.44709,0-4.75922l7.43067-7.43067c0.38679-0.38683,0.38679-1.01281,0-1.39964c-0.38683-0.38679-1.01281-0.38679-1.39964,0L1.98376,8.22076c-2.08368,2.08372-2.08368,5.47477,0,7.55845c2.08372,2.08372,5.47411,2.08302,7.55779-0.00066L18.77845,6.54165zM5.06321,12.6998c0.38679,0.38679,1.01281,0.38679,1.3996,0l9.2369-9.2369c1.31213-1.31213,3.44709-1.31213,4.75856-0.0007c0.38679,0.38683,1.01281,0.38683,1.3996,0c0.38683-0.38679,0.38683-1.01277,0-1.3996c-2.08368-2.08372-5.47407-2.08302-7.55775,0.0007l-9.2369,9.2369C4.67638,11.68699,4.67638,12.31298,5.06321,12.6998zM24.93661,11.30021c-0.38679-0.38683-1.01281-0.38683-1.3996,0l-9.2369,9.2369c-1.31213,1.31213-3.44709,1.31213-4.75856,0.00066c-0.38679-0.38679-1.01281-0.38679-1.3996,0c-0.38683,0.38683-0.38683,1.01281,0,1.3996c2.08368,2.08372,5.47407,2.08302,7.55775-0.00066l9.2369-9.2369C25.32343,12.31298,25.32343,11.68699,24.93661,11.30021zM20.45826,8.22146l-9.2369,9.2369c-0.38683,0.38679-0.38683,1.01281,0,1.3996c0.38679,0.38683,1.01281,0.38683,1.3996,0l9.2369-9.2369c1.31217-1.31213,3.44709-1.31213,4.75856-0.00066c1.31213,1.31213,1.31213,3.44709,0,4.75922l-7.43067,7.43067c-0.38679,0.38679-0.38679,1.01281,0,1.3996c0.38683,0.38683,1.01281,0.38683,1.39964,0l7.43067-7.43067c2.08368-2.08368,2.08368-5.47473,0-7.55845C25.93233,6.13708,22.54194,6.13774,20.45826,8.22146z"></path>
+								</svg>
+							</span>
+						</a>
+					</h1>
+					<a class="login" href="login.html">Log In</a>
+					<a class="button light" href="templates.html">Get Started</a>
+				</div>
+			</header>
+		
+			<p class="p"><font color="#FFFFFF">CLAIM YOUR DOMAIN</font></p>
+			<p class="pp"><font color="grey">This is the start of something beautiful. Search for a domain in the field below.<u id="tiaozhuan" href="javasript:;" style="color: white;">Learn more</u> </font></p><br />
+	        <input class="shuru" />
+			<div class="rrr"style="font-size: 100px"></div>
+		</div>
+		
+		<!--ipad-->
+		<div class="ipad">
+			<div class="wenzi">
+				<span style="font-size: 40px;">THE POSSIBILITIES ARE BEAUTIFUL</span><br /><br />
+				<span style="font-size: 20px;">Your domain is just the start. When your big idea is ready for the world, a striking website or powerful online store is just one click away.</span>
+			</div>
+			<div class="pics">
+				<div class="left-pic pic-min">
+					<img src="img/left-template-2.png" style="width: 100%; height: 100%;" />
+				</div>
+				<div class="left-template-1" >
+					<img src="img/left-template-1.png" style="width: 100%;height: 100%;"/>
+				</div>
+				<div class="left-icon-chat">
+					<img src="img/left-icon-chat.png"/>
+				</div>
+				<div class="left-template-3">
+					<img src="img/left-template-3.png" style="width: 216px; height:150px"/>
+				</div>
+				<div class="left-icon-spreadsheets">
+					<img src="img/left-icon-spreadsheets.png" style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="right-template-1">
+					<img src="img/right-template-1.png" style="width: 100%; height:100%;"/>
+				</div>
+				<div class="right-template-2">
+					<img src="img/right-template-2.png" style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="right-icon-drive">
+					<img src="img/right-icon-drive.png" style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="right-icon-slides">
+					<img src="img/right-icon-slides.png" style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="right-template-3">
+					<img src="img/right-template-3.png" style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="ipad-picture">
+					<div class="waves-pic">
+						
+					</div>
+				</div>
+				<div class="right-pic pic-min">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--三div滑动部分-->
+		<div class="section1">
+			
+			<div class="section11" id="section11">
+				<span style="font-size: 20px;">CREATE AN ONLINE STORE</span><br /><br />
+				
+
+Propel your business into a recognized brand with our powerful eCommerce platform.
+			</div>
+			<div class="section12" id="section12">
+				<span style="font-size: 20px;">CREATE YOUR OWN WEBSITE</span><br /><br />
+				
+
+From bold single pages to picture-perfect websites, Squarespace is the simplest way to stand out online.
+			</div>
+			<div class="section13" id="section13">
+				<span style="font-size: 20px;">GET PROFESSIONAL EMAIL</span><br /><br />
+				
+
+Connect your domain to G Suite and get custom email for your personal brand or business.
+			</div>
+		</div>
+		
+		
+		<div class="section-4">
+			<img src="img/4.PNG" class="section-4-picture"/>
+			<div class="section-4-1">
+				<span style="font-size: 20px;">TRANSPARENT PRICING<br /></span><br />
+				<span style="font-size: 15px;">When you’re purchasing a domain, the last thing you want is surprises. That’s why<br />
+				WHOIS privacy and a 2048-bit SSL certificate are included with your domain,<br />
+				which always renews at the same rate.</span>
+			</div>
+			<img src="img/5.PNG" class="section-4-picture-1" id="picture"/>
+			
+		</div>
+		
+		<div class="sibufenwenzi">
+			<div class="sibufenwenzi-1">
+				<span style="font-size: 20px;">SIMPLE CONTROLS.<br />STRIKING INTERFACE.</span><br />
+				Domain management has never looked so good. Now you can do everything from editing DNS records to forwarding in a way that’s not only simple, but beautiful.
+			</div>
+			
+			<div class="sibufenwenzi-2">
+			<span style="font-size: 20px;">SPAM-FREE PARKING</span><br />
+			When you register your domain with Squarespace, we’ll set up a clean, spam-free parking page until you’re ready to start building your site.
+			</div>
+			
+			<div class="sibufenwenzi-3">
+				<span style="font-size: 20px;">SSL CERTIFICATE INCLUDED</span><br />
+				We’ll generate and automatically configure SSL certificates for all of our domains, for free. SSL means connections to your Squarespace site are secure, and your rankings on Google will be boosted.
+			</div>
+			
+			<div class="sibufenwenzi-4">
+				<span style="font-size: 20px;">WHOIS PRIVACY</span><br />
+				At Squarespace, we believe you should be able to control how much of your personal information is shared online. That’s why we automatically provide WHOIS privacy, free of charge.
+			</div>
+		</div>
+		<!--transfer部分-->
+		<div class="transfer" id="transfer">
+			<div class="transfer-1">
+				<div class="transfer-2">
+				DOMAIN TRANSFER<br /><br />
+              	<span style="font-size: 20px;">ALREADY HAVE A DOMAIN?</span><br /><br />
+              	It’s simple to transfer your third-party domain to Squarespace<br />
+               	and get all of the same benefits as buying a domain from us.<br /><br />
+               	<div  class="transfer-3" id="transfer-3">
+               		<!--id不能重复-->
+               		TRANSFER YOUR DOMAIN
+               	</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<div class="section-3">
+			<img src="img/2.jpg" class="section-3-picture">
+			
+			<div class="section-3-1">
+				<span style="font-size: 30px;">AWARD-WINNING 24/7<br /><br />
+				CUSTOMER SERVICE<br /></span><br />
+         		<span style="font-size: 15px;">Everyone on our Customer Care team is an<br /> 
+         		experienced Squarespace user and works in one of<br />
+         		our offices. Nothing is ever outsourced.</span>
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		<!--页脚-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-brand">
+					<a href="templates.html">
+						<div class="footer-logo-full">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 24" width="168px" height="24px">
+								  <title>Squarespace</title>
+								  <path id="squarespace-logo-horizontal" style="fill: #222" d="M79.5626,5.53063l-5.24026,11.58048h1.33081l1.36326-3.03909h6.25848l1.34703,3.03909h1.39632L80.77798,5.53063H79.5626zM77.52551,12.88971l2.62856-5.84795l2.61171,5.84795H77.52551zM41.8326,10.73783c-2.52935-0.54218-3.12082-1.14987-3.12082-2.23424V8.47052c0-1.03445,0.95272-1.85615,2.44762-1.85615c1.18232,0,2.25046,0.37809,3.31798,1.24845l0.75556-1.00201c-1.1661-0.93587-2.36526-1.41254-4.0411-1.41254c-2.18433,0-3.77781,1.33081-3.77781,3.13767v0.03244c0,1.88921,1.21539,2.74335,3.86016,3.3186c2.41455,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01885,1.95472-2.56304,1.95472c-1.59285,0-2.74273-0.54218-3.94189-1.62654l-0.80485,0.95334c1.37947,1.23161,2.87437,1.8393,4.69745,1.8393c2.28353,0,3.9263-1.2809,3.9263-3.25247v-0.03244C45.57796,12.23273,44.39502,11.29623,41.8326,10.73783zM59.77015,11.36174V11.3293c0-3.17073-2.34904-5.91409-5.84795-5.91409s-5.88039,2.77642-5.88039,5.94653v0.03307c0,3.17011,2.34841,5.91346,5.84733,5.91346c1.41317,0,2.64477-0.45983,3.61434-1.21539l1.52734,1.36325l0.88721-0.96894l-1.51112-1.28152C59.26104,14.15438,59.77015,12.79113,59.77015,11.36174zM57.45418,14.40083L55.3023,12.4461l-0.87099,0.96894l2.15188,1.83992c-0.72249,0.54218-1.64277,0.85414-2.661,0.85414c-2.62793,0-4.53399-2.13566-4.53399-4.74737V11.3293c0-2.61233,1.87299-4.71492,4.50092-4.71492c2.62855,0,4.53399,2.13566,4.53399,4.74737v0.03307C58.42312,12.54468,58.07809,13.57913,57.45418,14.40083zM71.26765,12.29824c0,2.51313-1.34704,3.79465-3.46585,3.79465c-2.18494,0-3.51514-1.39632-3.51514-3.87701V5.61237h-1.29774v6.68587c0,3.25247,1.93788,4.99381,4.77981,4.99381c2.875,0,4.79665-1.74135,4.79665-5.09239V5.61237h-1.29774V12.29824zM150.96526,16.10911c-2.52997,0-4.45163-2.08637-4.45163-4.74737V11.3293c0-2.64477,1.90544-4.71492,4.45163-4.71492c1.56042,0,2.64478,0.65698,3.61372,1.57726l0.88721-0.95272c-1.14987-1.08436-2.39833-1.8237-4.4847-1.8237c-3.3835,0-5.8149,2.69406-5.8149,5.94653v0.03307c0,3.30176,2.44762,5.91346,5.76559,5.91346c2.08638,0,3.40034-0.80485,4.5995-2.02024l-0.85414-0.83792C153.57697,15.50141,152.5419,16.10911,150.96526,16.10911zM137.64406,5.53063l-5.24025,11.58048h1.3308l1.36327-3.03909h6.25848l1.34703,3.03909h1.39632l-5.24025-11.58048H137.64406zM135.60698,12.88971l2.62856-5.84795l2.61171,5.84795H135.60698zM159.83484,15.92817v-4.02425h6.2747v-1.18294h-6.2747V6.79531h7.01404V5.61237h-8.31178v11.49875h8.39352v-1.18294H159.83484zM102.27933,11.90392h6.27471v-1.18294h-6.27471V6.79531h7.01405V5.61237h-8.31179v11.49875h8.39352v-1.18294h-7.09579V11.90392zM97.54881,9.06199V9.02955c0-0.90343-0.3288-1.7089-0.88721-2.26731c-0.7225-0.72249-1.85614-1.14987-3.26868-1.14987h-4.94453v11.49875h1.29774v-4.46785h3.28554l3.3342,4.46785h1.59348l-3.53136-4.69808C96.23484,12.08486,97.54881,10.96743,97.54881,9.06199zM89.74613,11.47654V6.81153h3.5482c1.85615,0,2.94051,0.85414,2.94051,2.26731v0.03244c0,1.47868-1.23223,2.36526-2.95673,2.36526H89.74613zM116.6849,10.73783c-2.52998-0.54218-3.12144-1.14987-3.12144-2.23424V8.47052c0-1.03445,0.95271-1.85615,2.44762-1.85615c1.18294,0,2.25046,0.37809,3.31798,1.24845l0.75618-1.00201c-1.16672-0.93587-2.36588-1.41254-4.04109-1.41254c-2.18495,0-3.77843,1.33081-3.77843,3.13767v0.03244c0,1.88921,1.21601,2.74335,3.86016,3.3186c2.41517,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01823,1.95472-2.56242,1.95472c-1.59348,0-2.74335-0.54218-3.94251-1.62654l-0.80485,0.95334c1.3801,1.23161,2.87499,1.8393,4.69807,1.8393c2.28353,0,3.92567-1.2809,3.92567-3.25247v-0.03244C120.42963,12.23273,119.24731,11.29623,116.6849,10.73783zM127.9528,5.61237h-4.30376v11.49875h1.29774V13.0538h2.79202c2.44761,0,4.51777-1.28152,4.51777-3.76158V9.25915C132.25656,6.99247,130.54828,5.61237,127.9528,5.61237zM130.94197,9.3415c0,1.51112-1.24846,2.52935-3.15389,2.52935h-2.84131V6.81153h2.90745c1.85614,0,3.08775,0.85414,3.08775,2.49691V9.3415zM18.77845,6.54165c0.38683-0.38683,0.38683-1.01281,0-1.39964c-0.38679-0.38679-1.01281-0.38679-1.3996,0l-9.2369,9.2369c-1.31217,1.31217-3.44709,1.31217-4.75856,0.0007c-1.31213-1.31213-1.31213-3.44709,0-4.75922l7.43067-7.43067c0.38679-0.38683,0.38679-1.01281,0-1.39964c-0.38683-0.38679-1.01281-0.38679-1.39964,0L1.98376,8.22076c-2.08368,2.08372-2.08368,5.47477,0,7.55845c2.08372,2.08372,5.47411,2.08302,7.55779-0.00066L18.77845,6.54165zM5.06321,12.6998c0.38679,0.38679,1.01281,0.38679,1.3996,0l9.2369-9.2369c1.31213-1.31213,3.44709-1.31213,4.75856-0.0007c0.38679,0.38683,1.01281,0.38683,1.3996,0c0.38683-0.38679,0.38683-1.01277,0-1.3996c-2.08368-2.08372-5.47407-2.08302-7.55775,0.0007l-9.2369,9.2369C4.67638,11.68699,4.67638,12.31298,5.06321,12.6998zM24.93661,11.30021c-0.38679-0.38683-1.01281-0.38683-1.3996,0l-9.2369,9.2369c-1.31213,1.31213-3.44709,1.31213-4.75856,0.00066c-0.38679-0.38679-1.01281-0.38679-1.3996,0c-0.38683,0.38683-0.38683,1.01281,0,1.3996c2.08368,2.08372,5.47407,2.08302,7.55775-0.00066l9.2369-9.2369C25.32343,12.31298,25.32343,11.68699,24.93661,11.30021zM20.45826,8.22146l-9.2369,9.2369c-0.38683,0.38679-0.38683,1.01281,0,1.3996c0.38679,0.38683,1.01281,0.38683,1.3996,0l9.2369-9.2369c1.31217-1.31213,3.44709-1.31213,4.75856-0.00066c1.31213,1.31213,1.31213,3.44709,0,4.75922l-7.43067,7.43067c-0.38679,0.38679-0.38679,1.01281,0,1.3996c0.38683,0.38683,1.01281,0.38683,1.39964,0l7.43067-7.43067c2.08368-2.08368,2.08368-5.47473,0-7.55845C25.93233,6.13708,22.54194,6.13774,20.45826,8.22146z"></path>
+							</svg>
+						</div>
+						<div class="footer-logo-mark">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" width="30px" height="24px">
+							  	<title>Squarespace</title>
+							  	<path id="squarespace-logo-symbol" style="fill: #222" d="M24.93671,11.30019c-0.38681-0.38681-1.01281-0.38681-1.39961,0l-9.23691,9.23691c-1.31214,1.31214-3.44709,1.31214-4.75855,0.00068c-0.38681-0.38681-1.01281-0.38681-1.39961,0c-0.38681,0.38681-0.38681,1.01281,0,1.39961c2.0837,2.0837,5.47407,2.08302,7.55778-0.00068l9.2369-9.2369C25.32352,12.313,25.32352,11.687,24.93671,11.30019zM28.01613,8.22077c-2.0837-2.0837-5.47408-2.08302-7.55778,0.00068l-9.2369,9.2369c-0.38681,0.38681-0.38681,1.01281,0,1.39961c0.38681,0.38681,1.01281,0.38681,1.39961,0l9.2369-9.2369c1.31214-1.31214,3.4471-1.31214,4.75855-0.00068c1.31214,1.31214,1.31214,3.4471,0,4.75923l-7.43066,7.43066c-0.38681,0.38681-0.38681,1.01281,0,1.39961c0.38681,0.38681,1.01281,0.38681,1.39961,0l7.43066-7.43066C30.09984,13.69553,30.09984,10.30447,28.01613,8.22077zM21.85797,2.06261c-2.0837-2.0837-5.47408-2.08302-7.55778,0.00068l-9.2369,9.2369c-0.38681,0.38681-0.38681,1.01281,0,1.39961s1.01281,0.38681,1.39961,0l9.2369-9.2369c1.31214-1.31214,3.44709-1.31214,4.75855-0.00068c0.38681,0.38681,1.01281,0.38681,1.39961,0C22.24478,3.07541,22.24478,2.44941,21.85797,2.06261zM18.77855,5.14203c-0.38681-0.38681-1.01281-0.38681-1.39961,0l-9.2369,9.2369c-1.31214,1.31214-3.4471,1.31214-4.75855,0.00068c-1.31214-1.31214-1.31214-3.4471,0-4.75923l7.43066-7.43066c0.38681-0.38681,0.38681-1.01281,0-1.39961s-1.01281-0.38681-1.39961,0L1.98387,8.22077c-2.0837,2.0837-2.0837,5.47476,0,7.55846s5.47408,2.08302,7.55778-0.00068l9.2369-9.2369C19.16535,6.15484,19.16535,5.52884,18.77855,5.14203z"></path>
+							</svg>
+						</div>
+					</a>
+					<div class="footer-i18n-selection" data-type="currency" data-test-attribute="currency-picker">
+					        <span class="currency-symbol">$</span>
+					        <span class="currency-code">USD</span>
+					        <svg class="arrow-down-filled" width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <polygon id="Triangle-1" fill="#747474" transform="translate(7.500000, 4.500000) rotate(180.000000) translate(-7.500000, -4.500000) " points="7.5 -1.70530257e-13 15 9 2.27373675e-13 9"></polygon>
+							    </g>
+							</svg>						
+					</div>
+					<br class="only-tablet"/>
+					<div class="footer-i18n-selection" data-type="language">
+        				<span class="language-code">English</span>
+        				<svg class="arrow-down-filled" width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        						<polygon id="Triangle-1" fill="#747474" transform="translate(7.500000, 4.500000) rotate(180.000000) translate(-7.500000, -4.500000) " points="7.5 -1.70530257e-13 15 9 2.27373675e-13 9"></polygon>
+    						</g>
+						</svg>
+      				</div>      				
+				</div>
+				<nav class="footer-nav">
+  					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Products
+      						<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-8">
+          					<a class="footer-nav-link " href="domain-search.html" data-test-attribute="footer-nav-domains">
+          						Domains
+          					</a>
+          					<a class="footer-nav-link is--active" href="templates.html" data-test-attribute="footer-nav-websites">
+          						Websites
+          					</a>
+          					<a class="footer-nav-link " href="https://www.squarespace.com/#online-stores" data-test-attribute="footer-nav-online-stores">
+          						Online Stores
+          					</a>
+          					<a class="footer-nav-link " href="apps.html" data-test-attribute="footer-nav-mobile-apps">
+          						Mobile Apps
+          					</a>
+          					<a class="footer-nav-link " href="logo" data-test-attribute="footer-nav-logos">
+          						Logos
+          					</a>
+          					<a class="footer-nav-link " href="pricing.html" data-test-attribute="footer-nav-pricing">
+          						Pricing
+          					</a>
+      						<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-feature-index">
+      							Feature Index
+      						</a>
+          					<a class="footer-nav-link " href="login.html" data-test-attribute="footer-nav-login">
+          						Login
+          					</a>
+    					</div>
+  					</div>
+ 					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Tours
+  							<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-8">
+          					<a class="footer-nav-link " href="https://www.squarespace.com/#online-stores" data-test-attribute="footer-nav-online-stores">
+          						Online Stores
+          					</a>
+          					<a class="footer-nav-link " href="/tour/photography-websites" data-test-attribute="footer-nav-photographers">
+          						Photographers
+          					</a>
+          					<a class="footer-nav-link " href="/tour/create-a-blog" data-test-attribute="footer-nav-bloggers">
+          						Bloggers
+          					</a>
+          					<a class="footer-nav-link " href="/tour/portfolio-website" data-test-attribute="footer-nav-artists">
+          						Artists
+          					</a>
+          					<a class="footer-nav-link " href="/tour/restaurant-websites" data-test-attribute="footer-nav-restaurants">
+          						Restaurants
+          					</a>
+          					<a class="footer-nav-link " href="/tour/music-website" data-test-attribute="footer-nav-musicians">
+          						Musicians
+          					</a>
+          					<a class="footer-nav-link " href="/tour/wedding-website" data-test-attribute="footer-nav-weddings">
+          						Weddings
+          					</a>
+          					<a class="footer-nav-link " href="/google" data-test-attribute="footer-nav-small-businesses">
+          						Small Businesses
+          					</a>
+    					</div>
+  					</div>
+  					<div class="footer-nav-list">
+				        <h4 class="footer-nav-heading">
+				          	Company
+			          		<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+				  				<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-7">
+          					<a class="footer-nav-link " href="/about/company" data-test-attribute="footer-nav-about">
+          						About
+          					</a>
+          					<a class="footer-nav-link " href="/about/careers" data-test-attribute="footer-nav-careers">
+          						Careers
+          					</a>
+          					<a class="footer-nav-link " href="/customers" data-test-attribute="footer-nav-customers">
+          						Customers
+          					</a>
+          					<a class="footer-nav-link " href="/press" data-test-attribute="footer-nav-press-media">
+          						Press &amp; Media
+          					</a>
+          					<a class="footer-nav-link " href="/terms-of-service" data-test-attribute="footer-nav-terms-of-service">
+          						Terms of Service
+          					</a>
+          					<a class="footer-nav-link " href="privacy.html" data-test-attribute="footer-nav-privacy-policy">
+          						Privacy Policy
+          					</a>
+          					<a class="footer-nav-link is--external" href="https://support.squarespace.com/hc/requests/new" target="_blank" data-test-attribute="footer-nav-contact-us">
+          						Contact Us
+          					</a>
+    					</div>
+  					</div>
+  					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Community
+							<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-6">
+          					<a class="footer-nav-link is--external" href="https://support.squarespace.com" target="_blank" data-test-attribute="footer-nav-help-support">
+          						Help &amp; Support
+          					</a>
+          					<a class="footer-nav-link is--external" href="https://answers.squarespace.com" target="_blank" data-test-attribute="footer-nav-answers">
+          						Answers
+          					</a>
+          					<a class="footer-nav-link is--external" href="https://workshops.squarespace.com" target="_blank" data-test-attribute="footer-nav-workshops-webinars">
+          						Workshops &amp; Webinars
+          					</a>
+       						<a class="footer-nav-link is--external" href="https://specialists.squarespace.com" target="_blank" data-test-attribute="footer-nav-specialists">
+       							Specialists
+       						</a>
+          					<a class="footer-nav-link is--external" href="devolpers.html" target="_blank">
+          						Developers
+          					</a>
+			              	<a class="footer-nav-link is--external" href="https://circle.squarespace.com" target="_blank" data-test-attribute="footer-nav-circle">
+			              		Circle
+			              	</a>
+    					</div>
+  					</div>
+			      	<div class="footer-nav-list">
+			        	<h4 class="footer-nav-heading">
+			          		Follow
+				          	<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+				  				<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+			        	</h4>
+				        <div class="footer-nav-content contains-7">
+			              	<a class="footer-nav-link is--external" href="https://blog.squarespace.com" target="_blank" data-test-attribute="footer-nav-squarespace-blog">
+			              		Squarespace Blog
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://engineering.squarespace.com" target="_blank" data-test-attribute="footer-nav-engineering-blog">
+			              		Engineering Blog
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://status.squarespace.com" target="_blank" data-test-attribute="footer-nav-service-status">
+			              		Service Status
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://instagram.com/squarespace" target="_blank" data-test-attribute="footer-nav-instagram">
+			              		Instagram
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://facebook.com/squarespace" target="_blank" data-test-attribute="footer-nav-facebook">
+			              		Facebook
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://twitter.com/squarespace" target="_blank" data-test-attribute="footer-nav-twitter">
+			              		Twitter
+			              	</a>
+							<a class="footer-nav-link is--external" href="https://plus.google.com/+squarespace" target="_blank" data-test-attribute="footer-nav-google-plus">
+				      			Google Plus
+				          	</a>
+				        </div>
+			      	</div>
+				</nav>
+			</div>
+			<div id="currency" class="footer-i18n-selection-page">
+				<div class="selection-page-exit-btn">
+					<svg stroke="white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+						<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+					 </svg>
+				</div>
+				<div class="currency-options-container">
+					<h2>Select your currency</h2>
+					<ul class="currency-options">
+						<li class="currentcy" name="symbtn">
+							<span>
+								<span class="symbol">€</span>
+								<span class="code">EUR</span>
+							</span>
+						</li>
+						<li class="currentcy is--active" name="symbtn">
+							<span>
+								<span class="symbol">$</span>
+								<span class="code">USD</span>		
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="language" class="footer-i18n-selection-page">
+				<div class="selection-page-exit-btn">
+					<svg stroke="white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+						<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+					 </svg>
+				</div>
+				<div class="currency-options-container">
+					<h2>Select your currency</h2>
+					<ul class="currency-options">
+						<li class="currentcy is--active" name="languagebtn">
+							<span >
+								<span class="code">English</span>
+							</span>
+						</li>
+						<li class="currentcy" name="languagebtn">
+							<span>
+								<span class="code" >Español</span>					
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

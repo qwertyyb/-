@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+	<head >
+		<meta charset="utf-8">
+		<title>Website Templates — Squarespace</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"/>
+		<link rel="stylesheet" href="css/templates.css" >
+		<link href="css/HCo_fonts_www.css" rel="stylesheet"></link>
+		<script src="lib/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".menu-section-options").each(function(){
+					$(this).children().first().find('a').addClass("menu-section-option-checked").css('color', 'rgba(0,0,0,0.8)');
+				});
+				$(".grid-template").on("mouseover", function(){
+					var ss = $(this).children(".template-screenshot");
+					ss.addClass("template-screenshot-shadow");
+				});
+				$(".grid-template").on("mouseleave", function(){
+					$(this).children(".template-screenshot").removeClass("template-screenshot-shadow");
+				});
+				$(".menu-section-option").on('click', function(){
+					if($(this).attr('data-selection') != 'Favorites')
+					{
+						$(this).parent().children().each(function(){
+							$(this).find('a').css('color', 'rgb(119, 119, 119)');
+							$(this).find("a").removeClass("menu-section-option-checked");
+						});
+						$(this).find("a").addClass("menu-section-option-checked");
+						$(this).find('a').css('color', 'rgba(0,0,0,0.8)');
+					}
+				});
+				$(".template-info-heart-wrapper").click(function(){
+					var pa = $(this).find('path');
+					if(pa.attr('fill') == 'none')
+					{
+						pa.attr('fill', '#ff1818');
+						addFavoriteTemp();
+					}
+					else
+					{
+						pa.attr('fill', 'none');
+						removeFavoriteTemp();
+					}
+				});
+			});
+			function addFavoriteTemp(){
+				var fc = $(".favorites-count")
+				var count = Number(fc.attr('data-count'));
+				count += 1;
+				fc.html('(' + count + ')');
+				$('.heart').find('path').attr('fill', '#FF1818');
+				fc.attr('data-count', count);
+			}
+			function removeFavoriteTemp(){
+				var count = Number($(".favorites-count").attr('data-count'));
+				var fc = $(".favorites-count");
+				count -= 1;
+				if(count == 0)
+				{
+					fc.html('');
+					$('.heart').find('path').attr('fill', 'none');
+				}
+				else
+				{
+					fc.html('(' + count + ')');
+				}
+				fc.attr('data-count', count);
+			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".footer-i18n-selection").on('click', function(){
+					var btntype = $(this).attr("data-type");
+					if(btntype == 'currency')
+					{
+						$("#currency").fadeIn(500);
+					}
+					else if(btntype == 'language')
+					{
+						$("#language").fadeIn(500);
+					}
+				});
+				$(".selection-page-exit-btn").on('click', function(){
+					$(this).parent().fadeOut(500);
+				});
+				$(".footer-i18n-selection-page").click(function(){
+					$(this).fadeOut(500);
+				});
+				$("[name='symbtn']").click(function(){
+					$(".currency-symbol").text($(this).find(".symbol").text());
+					$(".currency-code").text($(this).find(".code").text());
+					$(this).addClass("is--active");
+					$(this).nextAll().removeClass("is--active");
+					$(this).prevAll().removeClass('is--active');
+				});
+				$("[name='languagebtn']").click(function(){
+					$(".language-code").text($(this).find('.code').text());
+					$(this).addClass('is--active');
+					$(this).nextAll().removeClass("is--active");
+					$(this).prevAll().removeClass('is--active');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<header id="header-2016">
+				<div class="header-content">
+					<a href="templates.html" class="logo">
+						<span class="full-logo">
+							<svg height="24px" width="168px" viewBox="0 0 168 24" xmlns="http://www.w3.org/2000/svg">
+								<title>Squarespac</title>
+								<path id="squarespace-logo-horizontal" d="M79.5626,5.53063l-5.24026,11.58048h1.33081l1.36326-3.03909h6.25848l1.34703,3.03909h1.39632L80.77798,5.53063H79.5626zM77.52551,12.88971l2.62856-5.84795l2.61171,5.84795H77.52551zM41.8326,10.73783c-2.52935-0.54218-3.12082-1.14987-3.12082-2.23424V8.47052c0-1.03445,0.95272-1.85615,2.44762-1.85615c1.18232,0,2.25046,0.37809,3.31798,1.24845l0.75556-1.00201c-1.1661-0.93587-2.36526-1.41254-4.0411-1.41254c-2.18433,0-3.77781,1.33081-3.77781,3.13767v0.03244c0,1.88921,1.21539,2.74335,3.86016,3.3186c2.41455,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01885,1.95472-2.56304,1.95472c-1.59285,0-2.74273-0.54218-3.94189-1.62654l-0.80485,0.95334c1.37947,1.23161,2.87437,1.8393,4.69745,1.8393c2.28353,0,3.9263-1.2809,3.9263-3.25247v-0.03244C45.57796,12.23273,44.39502,11.29623,41.8326,10.73783zM59.77015,11.36174V11.3293c0-3.17073-2.34904-5.91409-5.84795-5.91409s-5.88039,2.77642-5.88039,5.94653v0.03307c0,3.17011,2.34841,5.91346,5.84733,5.91346c1.41317,0,2.64477-0.45983,3.61434-1.21539l1.52734,1.36325l0.88721-0.96894l-1.51112-1.28152C59.26104,14.15438,59.77015,12.79113,59.77015,11.36174zM57.45418,14.40083L55.3023,12.4461l-0.87099,0.96894l2.15188,1.83992c-0.72249,0.54218-1.64277,0.85414-2.661,0.85414c-2.62793,0-4.53399-2.13566-4.53399-4.74737V11.3293c0-2.61233,1.87299-4.71492,4.50092-4.71492c2.62855,0,4.53399,2.13566,4.53399,4.74737v0.03307C58.42312,12.54468,58.07809,13.57913,57.45418,14.40083zM71.26765,12.29824c0,2.51313-1.34704,3.79465-3.46585,3.79465c-2.18494,0-3.51514-1.39632-3.51514-3.87701V5.61237h-1.29774v6.68587c0,3.25247,1.93788,4.99381,4.77981,4.99381c2.875,0,4.79665-1.74135,4.79665-5.09239V5.61237h-1.29774V12.29824zM150.96526,16.10911c-2.52997,0-4.45163-2.08637-4.45163-4.74737V11.3293c0-2.64477,1.90544-4.71492,4.45163-4.71492c1.56042,0,2.64478,0.65698,3.61372,1.57726l0.88721-0.95272c-1.14987-1.08436-2.39833-1.8237-4.4847-1.8237c-3.3835,0-5.8149,2.69406-5.8149,5.94653v0.03307c0,3.30176,2.44762,5.91346,5.76559,5.91346c2.08638,0,3.40034-0.80485,4.5995-2.02024l-0.85414-0.83792C153.57697,15.50141,152.5419,16.10911,150.96526,16.10911zM137.64406,5.53063l-5.24025,11.58048h1.3308l1.36327-3.03909h6.25848l1.34703,3.03909h1.39632l-5.24025-11.58048H137.64406zM135.60698,12.88971l2.62856-5.84795l2.61171,5.84795H135.60698zM159.83484,15.92817v-4.02425h6.2747v-1.18294h-6.2747V6.79531h7.01404V5.61237h-8.31178v11.49875h8.39352v-1.18294H159.83484zM102.27933,11.90392h6.27471v-1.18294h-6.27471V6.79531h7.01405V5.61237h-8.31179v11.49875h8.39352v-1.18294h-7.09579V11.90392zM97.54881,9.06199V9.02955c0-0.90343-0.3288-1.7089-0.88721-2.26731c-0.7225-0.72249-1.85614-1.14987-3.26868-1.14987h-4.94453v11.49875h1.29774v-4.46785h3.28554l3.3342,4.46785h1.59348l-3.53136-4.69808C96.23484,12.08486,97.54881,10.96743,97.54881,9.06199zM89.74613,11.47654V6.81153h3.5482c1.85615,0,2.94051,0.85414,2.94051,2.26731v0.03244c0,1.47868-1.23223,2.36526-2.95673,2.36526H89.74613zM116.6849,10.73783c-2.52998-0.54218-3.12144-1.14987-3.12144-2.23424V8.47052c0-1.03445,0.95271-1.85615,2.44762-1.85615c1.18294,0,2.25046,0.37809,3.31798,1.24845l0.75618-1.00201c-1.16672-0.93587-2.36588-1.41254-4.04109-1.41254c-2.18495,0-3.77843,1.33081-3.77843,3.13767v0.03244c0,1.88921,1.21601,2.74335,3.86016,3.3186c2.41517,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01823,1.95472-2.56242,1.95472c-1.59348,0-2.74335-0.54218-3.94251-1.62654l-0.80485,0.95334c1.3801,1.23161,2.87499,1.8393,4.69807,1.8393c2.28353,0,3.92567-1.2809,3.92567-3.25247v-0.03244C120.42963,12.23273,119.24731,11.29623,116.6849,10.73783zM127.9528,5.61237h-4.30376v11.49875h1.29774V13.0538h2.79202c2.44761,0,4.51777-1.28152,4.51777-3.76158V9.25915C132.25656,6.99247,130.54828,5.61237,127.9528,5.61237zM130.94197,9.3415c0,1.51112-1.24846,2.52935-3.15389,2.52935h-2.84131V6.81153h2.90745c1.85614,0,3.08775,0.85414,3.08775,2.49691V9.3415zM18.77845,6.54165c0.38683-0.38683,0.38683-1.01281,0-1.39964c-0.38679-0.38679-1.01281-0.38679-1.3996,0l-9.2369,9.2369c-1.31217,1.31217-3.44709,1.31217-4.75856,0.0007c-1.31213-1.31213-1.31213-3.44709,0-4.75922l7.43067-7.43067c0.38679-0.38683,0.38679-1.01281,0-1.39964c-0.38683-0.38679-1.01281-0.38679-1.39964,0L1.98376,8.22076c-2.08368,2.08372-2.08368,5.47477,0,7.55845c2.08372,2.08372,5.47411,2.08302,7.55779-0.00066L18.77845,6.54165zM5.06321,12.6998c0.38679,0.38679,1.01281,0.38679,1.3996,0l9.2369-9.2369c1.31213-1.31213,3.44709-1.31213,4.75856-0.0007c0.38679,0.38683,1.01281,0.38683,1.3996,0c0.38683-0.38679,0.38683-1.01277,0-1.3996c-2.08368-2.08372-5.47407-2.08302-7.55775,0.0007l-9.2369,9.2369C4.67638,11.68699,4.67638,12.31298,5.06321,12.6998zM24.93661,11.30021c-0.38679-0.38683-1.01281-0.38683-1.3996,0l-9.2369,9.2369c-1.31213,1.31213-3.44709,1.31213-4.75856,0.00066c-0.38679-0.38679-1.01281-0.38679-1.3996,0c-0.38683,0.38683-0.38683,1.01281,0,1.3996c2.08368,2.08372,5.47407,2.08302,7.55775-0.00066l9.2369-9.2369C25.32343,12.31298,25.32343,11.68699,24.93661,11.30021zM20.45826,8.22146l-9.2369,9.2369c-0.38683,0.38679-0.38683,1.01281,0,1.3996c0.38679,0.38683,1.01281,0.38683,1.3996,0l9.2369-9.2369c1.31217-1.31213,3.44709-1.31213,4.75856-0.00066c1.31213,1.31213,1.31213,3.44709,0,4.75922l-7.43067,7.43067c-0.38679,0.38679-0.38679,1.01281,0,1.3996c0.38683,0.38683,1.01281,0.38683,1.39964,0l7.43067-7.43067c2.08368-2.08368,2.08368-5.47473,0-7.55845C25.93233,6.13708,22.54194,6.13774,20.45826,8.22146z" style="fill: #fff"></path>
+							</svg>
+						</span>
+					</a>
+				</div>			
+			</header>
+			<div id="templates">
+				<hr class="divider"></hr>
+				<div class="video-hover"><img></img><video></video></div>
+				<section class="template-grid">
+					<div class="hero template-grid-hero">
+						<div class="hero-centering-wrapper">
+							<heading class="hero-heading">
+								<small class="hero-subheadline">
+						      		Pick your starting point
+						    	</small>
+						    	<h1 class="hero-headline">
+						      		Templates
+						    	</h1>
+							</heading>
+							<p class="hero-description">
+					      		Our beautifully-designed templates come with hundreds of customizable features. Every template is just a starting point—you can style it to look any way you want.
+					    	</p>
+						</div>
+					</div>	
+				</section>
+			</div >
+		</div>
+		<div class="templates-content">
+			<div class="menu-trigger">
+				<h3>
+		      		Select Filters
+		    	</h3>
+		    	<span class="down-arrow">
+		    		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 25" height="25" width="29">
+		    			<g opacity=".2" fill-rule="evenodd" fill="none" transform="translate(0 1)">
+		    				<path d="M0 20h29v1H0zM0 11h29v1H0zM0 2h29v1H0z" fill="#000">		    					
+		    				</path>
+		    				<rect rx="2.5" height="5" width="5" y="9" x="20" fill="#FFF" stroke="#000">		    					
+		    				</rect>
+		    				<rect rx="2.5" height="5" width="5" y="18" x="4" fill="#FFF" stroke="#000">		    					
+		    				</rect>
+		    				<rect rx="2.5" height="5" width="5" x="4" fill="#FFF" stroke="#000">		    					
+		    				</rect>
+		    			</g>
+		    		</svg>
+		    	</span>
+			</div>	
+			<menu class="menu templates-content-menu" >
+				<div class="menu-headroom-wrapper">
+					<section class="menu-section menu-section-categories">
+						<h4 class="menu-section-heading">
+					      	Categories
+					    </h4>
+					    <ul data-id="1" id="left-ul" class="menu-section-options">
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	All Designs
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Online Stores
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Art & Design
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Community & Non-Profit
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Creative Services
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Entertainment & Media
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Fashion & Beauty
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Food & Drink
+							    </a>
+							</li>
+							<li id="mso8" class="menu-section-option category-option">
+								<a href="#">
+							      	Health & Fitness
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Home & Living
+							    </a></li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Music
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Photography
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Professional Services
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Travel & Lifestyle
+							    </a>
+							</li>
+							<li class="menu-section-option category-option">
+								<a href="#">
+							      	Wedding
+							    </a>
+							</li>
+							<li class="menu-section-option category-option" data-selection="Favorites">
+								<a href="#">
+							      	My Favorites 
+							      	<span class="favorites-count" data-count="0"></span>
+							      	<span class="heart">
+							      		<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+							      			<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"> 
+							      			</path>
+							      		</svg>
+							      	</span>
+							    </a>
+							</li>
+					    </ul>
+					</section>
+					<section id="menu-sort-by" class="menu-section menu-section-sort-by">
+						<h4 class="menu-section-heading" style="padding-top: 47px;">
+				      		Sort By
+				    	</h4>
+				    	<ul class="menu-section-options" data-section="sortBy">
+				    		<li class="menu-section-option sortBy-option" data-selection="featured">
+				    			<a href="javascript:">
+							      	Featured
+							    </a>
+				    		</li>
+				    		<li class="menu-section-option sortBy-option" data-selection="latest">
+				    			<a href="javascript:">
+							      	Latest
+							    </a>
+				    		</li>
+				    		<li class="menu-section-option sortBy-option" data-selection="popular">
+				    			<a href="javascript:">
+							      	Most Popular
+							    </a>
+				    		</li>
+				    	</ul>
+					</section>
+				</div>
+			</menu>
+			<section class="grid template-content-grid">
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/bedford-demo-squarespace-com--1689x1080-500w.jpg" />
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Bedford</h4>
+						<span class="template-info-heart-wrapper">
+							<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+	  							<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">
+							One of our most popular templates, Bedford offers a wide range of features specifically for non-profits and small businesses. Although its beautiful interface and countless features make it an ideal template for almost anything.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/skye-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Skye</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Make your blog soar on Skye, a magazine-style template that gives your readers a streamlined yet immersive browsing experience on a clean and balanced grid layout.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/horizon-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Horizon</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">When you put on a show, you put it all on stage. Designed to be a one-page website experience for bands with a gigantic presence, Horizon lets your content take center stage like never before.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/avenue-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Avenue</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">A classic template with a timeless look, Avenue’s clean, straight lines and adaptive grid-based layout are especially popular with photographers, illustrators and designers.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/basil-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Basil</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">One of our most powerful templates, Basil helps you give visitors an unforgettable, dynamic viewing experience with 3D scrolling effects and stunning, full-screen imagery.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/native-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Native</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Preferred by businesses and bloggers, Native is a versatile and modern template. The Native blog layout adapts to its content, promoting your most interesting media.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/hayden-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Hayden</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Hayden is a contemporary design favored by small and mid-sized businesses with a chic aesthetic and a modern sensibility.</p>
+					</div>
+				</a>
+								<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/alex-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Alex</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Alex is like no other template—so it’s perfect for your engagement. Alex helps you tell your story in a dynamic, engaging, and fun way that uses parallax scrolling and stunning, full-screen imagery.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/shift-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Shift</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Shift is powerful. With gigantic, screen-filling images and a variety of ways for you to tell your story, Shift is for individuals who are making moves.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/aubrey-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Aubrey</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Aubrey prominently displays your favorite photos by utilizing a unique front-and-center design that puts your occasion’s most important details where they can’t be missed.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/forte-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Forte</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Forte is a bold yet minimal template that features full-screen images and precise typography. Its landing page pulls visitors into your portfolio, showcasing the range of projects for your restaurant, portfolio, or business in beautiful high-resolution.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/montauk-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Montauk</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Montauk is a polished business template that’s easy to set up and easier to customize. Montauk is valued by independent businesses for its flexibility, clean layouts, and professional style.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/wexley-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Wexley</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Montauk is a polished business template that’s easy to set up and easier to customize. Montauk is valued by independent businesses for its flexibility, clean layouts, and professional style.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/flatiron-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Flatiron</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Like the iconic Manhattan building, Flatiron is unconventional. With a portfolio experience that supports multiple portfolio projects side by side, Flatiron is popular with art directors, illustrators, and photographers.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/ishimoto-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Ishimoto</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">A one-of-a-kind template with a one-of-a-kind name. Ishimoto is a portfolio template with an innovative, horizontal gallery slider that makes it preferred among photographers, artists, and restaurants.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/aviator-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Aviator</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Take your business to new heights with Aviator. Use this template’s content overlay system to put your business’s vital info where it can’t be missed, then easily customize the beautiful full screen background image with just a few clicks.
+						</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/pacific-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Pacific</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Perfect for agencies, restaurants, bands, wedding sites, and more. Pacific allows you to create long scrolling pages with background images and beautiful full-width galleries or albums.</p>
+					</div>
+				</a>
+				<a class="grid-template template template-dummy">
+					<div class="template-screenshot">
+						<div class="template-screenshot-browser"></div>
+						<div class="template-screenshot-image">
+							<img class="template-image-lable" src="img/wells-demo-squarespace-com--1689x1080-500w.jpg"/>
+						</div>
+					</div>
+					<div class="template-info">
+						<h4 class="template-info-title">Wells</h4>
+						<span class="template-info-heart-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" height="15" width="15">
+								<path stroke="#999" stroke-width="1px" d="M1.277 2.211c-1.704 1.62-1.744 4.233.13 6.026L7.427 14l6.022-5.763c1.874-1.792 1.834-4.405.13-6.026-1.702-1.62-4.456-1.613-6.151.016C5.733.597 2.977.59 1.276 2.21l.001.001z" fill="none" fill-rule="evenodd"></path>
+							</svg>
+						</span>
+						<p class="template-info-description">Wells is popular with artists, photographers, and businesses that value simple yet elegant design.
+						</p>
+					</div>
+				</a>
+			</section>
+		</div>	
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-brand">
+					<a href="templates.html">
+						<div class="footer-logo-full">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 24" width="168px" height="24px">
+								  <title>Squarespace</title>
+								  <path id="squarespace-logo-horizontal" style="fill: #222" d="M79.5626,5.53063l-5.24026,11.58048h1.33081l1.36326-3.03909h6.25848l1.34703,3.03909h1.39632L80.77798,5.53063H79.5626zM77.52551,12.88971l2.62856-5.84795l2.61171,5.84795H77.52551zM41.8326,10.73783c-2.52935-0.54218-3.12082-1.14987-3.12082-2.23424V8.47052c0-1.03445,0.95272-1.85615,2.44762-1.85615c1.18232,0,2.25046,0.37809,3.31798,1.24845l0.75556-1.00201c-1.1661-0.93587-2.36526-1.41254-4.0411-1.41254c-2.18433,0-3.77781,1.33081-3.77781,3.13767v0.03244c0,1.88921,1.21539,2.74335,3.86016,3.3186c2.41455,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01885,1.95472-2.56304,1.95472c-1.59285,0-2.74273-0.54218-3.94189-1.62654l-0.80485,0.95334c1.37947,1.23161,2.87437,1.8393,4.69745,1.8393c2.28353,0,3.9263-1.2809,3.9263-3.25247v-0.03244C45.57796,12.23273,44.39502,11.29623,41.8326,10.73783zM59.77015,11.36174V11.3293c0-3.17073-2.34904-5.91409-5.84795-5.91409s-5.88039,2.77642-5.88039,5.94653v0.03307c0,3.17011,2.34841,5.91346,5.84733,5.91346c1.41317,0,2.64477-0.45983,3.61434-1.21539l1.52734,1.36325l0.88721-0.96894l-1.51112-1.28152C59.26104,14.15438,59.77015,12.79113,59.77015,11.36174zM57.45418,14.40083L55.3023,12.4461l-0.87099,0.96894l2.15188,1.83992c-0.72249,0.54218-1.64277,0.85414-2.661,0.85414c-2.62793,0-4.53399-2.13566-4.53399-4.74737V11.3293c0-2.61233,1.87299-4.71492,4.50092-4.71492c2.62855,0,4.53399,2.13566,4.53399,4.74737v0.03307C58.42312,12.54468,58.07809,13.57913,57.45418,14.40083zM71.26765,12.29824c0,2.51313-1.34704,3.79465-3.46585,3.79465c-2.18494,0-3.51514-1.39632-3.51514-3.87701V5.61237h-1.29774v6.68587c0,3.25247,1.93788,4.99381,4.77981,4.99381c2.875,0,4.79665-1.74135,4.79665-5.09239V5.61237h-1.29774V12.29824zM150.96526,16.10911c-2.52997,0-4.45163-2.08637-4.45163-4.74737V11.3293c0-2.64477,1.90544-4.71492,4.45163-4.71492c1.56042,0,2.64478,0.65698,3.61372,1.57726l0.88721-0.95272c-1.14987-1.08436-2.39833-1.8237-4.4847-1.8237c-3.3835,0-5.8149,2.69406-5.8149,5.94653v0.03307c0,3.30176,2.44762,5.91346,5.76559,5.91346c2.08638,0,3.40034-0.80485,4.5995-2.02024l-0.85414-0.83792C153.57697,15.50141,152.5419,16.10911,150.96526,16.10911zM137.64406,5.53063l-5.24025,11.58048h1.3308l1.36327-3.03909h6.25848l1.34703,3.03909h1.39632l-5.24025-11.58048H137.64406zM135.60698,12.88971l2.62856-5.84795l2.61171,5.84795H135.60698zM159.83484,15.92817v-4.02425h6.2747v-1.18294h-6.2747V6.79531h7.01404V5.61237h-8.31178v11.49875h8.39352v-1.18294H159.83484zM102.27933,11.90392h6.27471v-1.18294h-6.27471V6.79531h7.01405V5.61237h-8.31179v11.49875h8.39352v-1.18294h-7.09579V11.90392zM97.54881,9.06199V9.02955c0-0.90343-0.3288-1.7089-0.88721-2.26731c-0.7225-0.72249-1.85614-1.14987-3.26868-1.14987h-4.94453v11.49875h1.29774v-4.46785h3.28554l3.3342,4.46785h1.59348l-3.53136-4.69808C96.23484,12.08486,97.54881,10.96743,97.54881,9.06199zM89.74613,11.47654V6.81153h3.5482c1.85615,0,2.94051,0.85414,2.94051,2.26731v0.03244c0,1.47868-1.23223,2.36526-2.95673,2.36526H89.74613zM116.6849,10.73783c-2.52998-0.54218-3.12144-1.14987-3.12144-2.23424V8.47052c0-1.03445,0.95271-1.85615,2.44762-1.85615c1.18294,0,2.25046,0.37809,3.31798,1.24845l0.75618-1.00201c-1.16672-0.93587-2.36588-1.41254-4.04109-1.41254c-2.18495,0-3.77843,1.33081-3.77843,3.13767v0.03244c0,1.88921,1.21601,2.74335,3.86016,3.3186c2.41517,0.50911,2.9898,1.11681,2.9898,2.18433v0.03307c0,1.13365-1.01823,1.95472-2.56242,1.95472c-1.59348,0-2.74335-0.54218-3.94251-1.62654l-0.80485,0.95334c1.3801,1.23161,2.87499,1.8393,4.69807,1.8393c2.28353,0,3.92567-1.2809,3.92567-3.25247v-0.03244C120.42963,12.23273,119.24731,11.29623,116.6849,10.73783zM127.9528,5.61237h-4.30376v11.49875h1.29774V13.0538h2.79202c2.44761,0,4.51777-1.28152,4.51777-3.76158V9.25915C132.25656,6.99247,130.54828,5.61237,127.9528,5.61237zM130.94197,9.3415c0,1.51112-1.24846,2.52935-3.15389,2.52935h-2.84131V6.81153h2.90745c1.85614,0,3.08775,0.85414,3.08775,2.49691V9.3415zM18.77845,6.54165c0.38683-0.38683,0.38683-1.01281,0-1.39964c-0.38679-0.38679-1.01281-0.38679-1.3996,0l-9.2369,9.2369c-1.31217,1.31217-3.44709,1.31217-4.75856,0.0007c-1.31213-1.31213-1.31213-3.44709,0-4.75922l7.43067-7.43067c0.38679-0.38683,0.38679-1.01281,0-1.39964c-0.38683-0.38679-1.01281-0.38679-1.39964,0L1.98376,8.22076c-2.08368,2.08372-2.08368,5.47477,0,7.55845c2.08372,2.08372,5.47411,2.08302,7.55779-0.00066L18.77845,6.54165zM5.06321,12.6998c0.38679,0.38679,1.01281,0.38679,1.3996,0l9.2369-9.2369c1.31213-1.31213,3.44709-1.31213,4.75856-0.0007c0.38679,0.38683,1.01281,0.38683,1.3996,0c0.38683-0.38679,0.38683-1.01277,0-1.3996c-2.08368-2.08372-5.47407-2.08302-7.55775,0.0007l-9.2369,9.2369C4.67638,11.68699,4.67638,12.31298,5.06321,12.6998zM24.93661,11.30021c-0.38679-0.38683-1.01281-0.38683-1.3996,0l-9.2369,9.2369c-1.31213,1.31213-3.44709,1.31213-4.75856,0.00066c-0.38679-0.38679-1.01281-0.38679-1.3996,0c-0.38683,0.38683-0.38683,1.01281,0,1.3996c2.08368,2.08372,5.47407,2.08302,7.55775-0.00066l9.2369-9.2369C25.32343,12.31298,25.32343,11.68699,24.93661,11.30021zM20.45826,8.22146l-9.2369,9.2369c-0.38683,0.38679-0.38683,1.01281,0,1.3996c0.38679,0.38683,1.01281,0.38683,1.3996,0l9.2369-9.2369c1.31217-1.31213,3.44709-1.31213,4.75856-0.00066c1.31213,1.31213,1.31213,3.44709,0,4.75922l-7.43067,7.43067c-0.38679,0.38679-0.38679,1.01281,0,1.3996c0.38683,0.38683,1.01281,0.38683,1.39964,0l7.43067-7.43067c2.08368-2.08368,2.08368-5.47473,0-7.55845C25.93233,6.13708,22.54194,6.13774,20.45826,8.22146z"></path>
+							</svg>
+						</div>
+						<div class="footer-logo-mark">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" width="30px" height="24px">
+							  	<title>Squarespace</title>
+							  	<path id="squarespace-logo-symbol" style="fill: #222" d="M24.93671,11.30019c-0.38681-0.38681-1.01281-0.38681-1.39961,0l-9.23691,9.23691c-1.31214,1.31214-3.44709,1.31214-4.75855,0.00068c-0.38681-0.38681-1.01281-0.38681-1.39961,0c-0.38681,0.38681-0.38681,1.01281,0,1.39961c2.0837,2.0837,5.47407,2.08302,7.55778-0.00068l9.2369-9.2369C25.32352,12.313,25.32352,11.687,24.93671,11.30019zM28.01613,8.22077c-2.0837-2.0837-5.47408-2.08302-7.55778,0.00068l-9.2369,9.2369c-0.38681,0.38681-0.38681,1.01281,0,1.39961c0.38681,0.38681,1.01281,0.38681,1.39961,0l9.2369-9.2369c1.31214-1.31214,3.4471-1.31214,4.75855-0.00068c1.31214,1.31214,1.31214,3.4471,0,4.75923l-7.43066,7.43066c-0.38681,0.38681-0.38681,1.01281,0,1.39961c0.38681,0.38681,1.01281,0.38681,1.39961,0l7.43066-7.43066C30.09984,13.69553,30.09984,10.30447,28.01613,8.22077zM21.85797,2.06261c-2.0837-2.0837-5.47408-2.08302-7.55778,0.00068l-9.2369,9.2369c-0.38681,0.38681-0.38681,1.01281,0,1.39961s1.01281,0.38681,1.39961,0l9.2369-9.2369c1.31214-1.31214,3.44709-1.31214,4.75855-0.00068c0.38681,0.38681,1.01281,0.38681,1.39961,0C22.24478,3.07541,22.24478,2.44941,21.85797,2.06261zM18.77855,5.14203c-0.38681-0.38681-1.01281-0.38681-1.39961,0l-9.2369,9.2369c-1.31214,1.31214-3.4471,1.31214-4.75855,0.00068c-1.31214-1.31214-1.31214-3.4471,0-4.75923l7.43066-7.43066c0.38681-0.38681,0.38681-1.01281,0-1.39961s-1.01281-0.38681-1.39961,0L1.98387,8.22077c-2.0837,2.0837-2.0837,5.47476,0,7.55846s5.47408,2.08302,7.55778-0.00068l9.2369-9.2369C19.16535,6.15484,19.16535,5.52884,18.77855,5.14203z"></path>
+							</svg>
+						</div>
+					</a>
+					<div class="footer-i18n-selection" data-type="currency" data-test-attribute="currency-picker">
+					        <span class="currency-symbol">$</span>
+					        <span class="currency-code">USD</span>
+					        <svg class="arrow-down-filled" width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <polygon id="Triangle-1" fill="#747474" transform="translate(7.500000, 4.500000) rotate(180.000000) translate(-7.500000, -4.500000) " points="7.5 -1.70530257e-13 15 9 2.27373675e-13 9"></polygon>
+							    </g>
+							</svg>						
+					</div>
+					<br class="only-tablet"/>
+					<div class="footer-i18n-selection" data-type="language">
+        				<span class="language-code">English</span>
+        				<svg class="arrow-down-filled" width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        						<polygon id="Triangle-1" fill="#747474" transform="translate(7.500000, 4.500000) rotate(180.000000) translate(-7.500000, -4.500000) " points="7.5 -1.70530257e-13 15 9 2.27373675e-13 9"></polygon>
+    						</g>
+						</svg>
+      				</div>      				
+				</div>
+				<nav class="footer-nav">
+  					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Products
+      						<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-8">
+          					<a class="footer-nav-link " href="domain-search.html" data-test-attribute="footer-nav-domains">
+          						Domains
+          					</a>
+          					<a class="footer-nav-link is--active" href="templates.html" data-test-attribute="footer-nav-websites">
+          						Websites
+          					</a>
+          					<a class="footer-nav-link " href="https://www.squarespace.com/#online-stores" data-test-attribute="footer-nav-online-stores">
+          						Online Stores
+          					</a>
+          					<a class="footer-nav-link " href="apps.html" data-test-attribute="footer-nav-mobile-apps">
+          						Mobile Apps
+          					</a>
+          					<a class="footer-nav-link " href="logo" data-test-attribute="footer-nav-logos">
+          						Logos
+          					</a>
+          					<a class="footer-nav-link " href="pricing.html" data-test-attribute="footer-nav-pricing">
+          						Pricing
+          					</a>
+      						<a class="footer-nav-link " href="javascript:;" data-test-attribute="footer-nav-feature-index">
+      							Feature Index
+      						</a>
+          					<a class="footer-nav-link " href="login.html" data-test-attribute="footer-nav-login">
+          						Login
+          					</a>
+    					</div>
+  					</div>
+ 					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Tours
+  							<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-8">
+          					<a class="footer-nav-link " href="https://www.squarespace.com/#online-stores" data-test-attribute="footer-nav-online-stores">
+          						Online Stores
+          					</a>
+          					<a class="footer-nav-link " href="/tour/photography-websites" data-test-attribute="footer-nav-photographers">
+          						Photographers
+          					</a>
+          					<a class="footer-nav-link " href="/tour/create-a-blog" data-test-attribute="footer-nav-bloggers">
+          						Bloggers
+          					</a>
+          					<a class="footer-nav-link " href="/tour/portfolio-website" data-test-attribute="footer-nav-artists">
+          						Artists
+          					</a>
+          					<a class="footer-nav-link " href="/tour/restaurant-websites" data-test-attribute="footer-nav-restaurants">
+          						Restaurants
+          					</a>
+          					<a class="footer-nav-link " href="/tour/music-website" data-test-attribute="footer-nav-musicians">
+          						Musicians
+          					</a>
+          					<a class="footer-nav-link " href="/tour/wedding-website" data-test-attribute="footer-nav-weddings">
+          						Weddings
+          					</a>
+          					<a class="footer-nav-link " href="/google" data-test-attribute="footer-nav-small-businesses">
+          						Small Businesses
+          					</a>
+    					</div>
+  					</div>
+  					<div class="footer-nav-list">
+				        <h4 class="footer-nav-heading">
+				          	Company
+			          		<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+				  				<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-7">
+          					<a class="footer-nav-link " href="/about/company" data-test-attribute="footer-nav-about">
+          						About
+          					</a>
+          					<a class="footer-nav-link " href="/about/careers" data-test-attribute="footer-nav-careers">
+          						Careers
+          					</a>
+          					<a class="footer-nav-link " href="/customers" data-test-attribute="footer-nav-customers">
+          						Customers
+          					</a>
+          					<a class="footer-nav-link " href="/press" data-test-attribute="footer-nav-press-media">
+          						Press &amp; Media
+          					</a>
+          					<a class="footer-nav-link " href="/terms-of-service" data-test-attribute="footer-nav-terms-of-service">
+          						Terms of Service
+          					</a>
+          					<a class="footer-nav-link " href="privacy.html" data-test-attribute="footer-nav-privacy-policy">
+          						Privacy Policy
+          					</a>
+          					<a class="footer-nav-link is--external" href="https://support.squarespace.com/hc/requests/new" target="_blank" data-test-attribute="footer-nav-contact-us">
+          						Contact Us
+          					</a>
+    					</div>
+  					</div>
+  					<div class="footer-nav-list">
+    					<h4 class="footer-nav-heading">
+      						Community
+							<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+    					</h4>
+    					<div class="footer-nav-content contains-6">
+          					<a class="footer-nav-link is--external" href="https://support.squarespace.com" target="_blank" data-test-attribute="footer-nav-help-support">
+          						Help &amp; Support
+          					</a>
+          					<a class="footer-nav-link is--external" href="https://answers.squarespace.com" target="_blank" data-test-attribute="footer-nav-answers">
+          						Answers
+          					</a>
+          					<a class="footer-nav-link is--external" href="https://workshops.squarespace.com" target="_blank" data-test-attribute="footer-nav-workshops-webinars">
+          						Workshops &amp; Webinars
+          					</a>
+       						<a class="footer-nav-link is--external" href="https://specialists.squarespace.com" target="_blank" data-test-attribute="footer-nav-specialists">
+       							Specialists
+       						</a>
+          					<a class="footer-nav-link is--external" href="devolpers.html" target="_blank">
+          						Developers
+          					</a>
+			              	<a class="footer-nav-link is--external" href="https://circle.squarespace.com" target="_blank" data-test-attribute="footer-nav-circle">
+			              		Circle
+			              	</a>
+    					</div>
+  					</div>
+			      	<div class="footer-nav-list">
+			        	<h4 class="footer-nav-heading">
+			          		Follow
+				          	<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17.7">
+				  				<path fill-rule="evenodd" clip-rule="evenodd" d="M.5 3.9l13 12.9 13-12.9L23.6 1l-10 10-10-10L.5 3.9z"></path>
+							</svg>
+			        	</h4>
+				        <div class="footer-nav-content contains-7">
+			              	<a class="footer-nav-link is--external" href="https://blog.squarespace.com" target="_blank" data-test-attribute="footer-nav-squarespace-blog">
+			              		Squarespace Blog
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://engineering.squarespace.com" target="_blank" data-test-attribute="footer-nav-engineering-blog">
+			              		Engineering Blog
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://status.squarespace.com" target="_blank" data-test-attribute="footer-nav-service-status">
+			              		Service Status
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://instagram.com/squarespace" target="_blank" data-test-attribute="footer-nav-instagram">
+			              		Instagram
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://facebook.com/squarespace" target="_blank" data-test-attribute="footer-nav-facebook">
+			              		Facebook
+			              	</a>
+			              	<a class="footer-nav-link is--external" href="https://twitter.com/squarespace" target="_blank" data-test-attribute="footer-nav-twitter">
+			              		Twitter
+			              	</a>
+							<a class="footer-nav-link is--external" href="https://plus.google.com/+squarespace" target="_blank" data-test-attribute="footer-nav-google-plus">
+				      			Google Plus
+				          	</a>
+				        </div>
+			      	</div>
+				</nav>
+			</div>
+			<div id="currency" class="footer-i18n-selection-page">
+				<div class="selection-page-exit-btn">
+					<svg stroke="white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+						<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+					 </svg>
+				</div>
+				<div class="currency-options-container">
+					<h2>Select your currency</h2>
+					<ul class="currency-options">
+						<li class="currentcy" name="symbtn">
+							<span>
+								<span class="symbol">€</span>
+								<span class="code">EUR</span>
+							</span>
+						</li>
+						<li class="currentcy is--active" name="symbtn">
+							<span>
+								<span class="symbol">$</span>
+								<span class="code">USD</span>		
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="language" class="footer-i18n-selection-page">
+				<div class="selection-page-exit-btn">
+					<svg stroke="white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+						<line x1="1.9" y1="1.9" x2="23.1" y2="23.1"></line>
+						<line x1="23.1" y1="1.9" x2="1.9" y2="23.1"></line>
+					 </svg>
+				</div>
+				<div class="currency-options-container">
+					<h2>Select your currency</h2>
+					<ul class="currency-options">
+						<li class="currentcy is--active" name="languagebtn">
+							<span >
+								<span class="code">English</span>
+							</span>
+						</li>
+						<li class="currentcy" name="languagebtn">
+							<span>
+								<span class="code" >Español</span>					
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+
+
